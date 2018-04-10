@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115095001-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115095001-1');
+</script>
+
+
 	<title>Michael Jones</title>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -120,6 +131,12 @@
 			background-position: center;
 			border-color: #424140;
 		}
+		.grow{
+			transition: all .2s ease-in-out;
+		}
+		.grow:hover{
+			transform: scale(1.05);
+		}
 
 		.values-col {
 			padding-top: 20px;
@@ -150,8 +167,10 @@
 		}
 
 		.contact-icon {
+			line-height: 100px;
 			font-size: 5em;
 			color: #242424;
+			transition: font-size .2s ease-in-out;
 		}
 
 		.contact-icon:hover {
@@ -217,12 +236,15 @@
 
 		.code-link {
 			font-size: 2em;
+			line-height: 50px;
 			color: blue;
+			transition: font-size .2s ease-in-out;
 		}
 
 		.code-link:hover {
 			color: #424140;
-			font-size: 2.3em;
+			font-size: 2.4em;
+			
 		}
 
 		.iframe-container {
@@ -294,8 +316,6 @@
 					<p id="dev-name">Michael Jones</p>
 				</div>
 			</div>
-
-
 			<div class="row justify-content-center">
 				<div class="col-8">
 					<hr id="jumbo-bar">
@@ -360,18 +380,18 @@
 		</div>
 
 		<div class="row" style="padding-left:20px;">
-			<div class="col-12 col-md-4 values-col text-center">
+			<div class="col-12 col-md-4 values-col text-center grow">
 				<h4>RELIABILITY</h4>
 				<img class="rounded" src="images/reliability_image.png">
 
 				<div>
 					I understand the importance of being reliable. Setting reasonable expectations, proper planning, and staying well organized
 					are the tools I use to ensure my work is accomplished in a dependable manner. To all that I have worked for and with,
-					this is a quality that has proven invaluable.
+					this quality that has proven invaluable.
 				</div>
 
 			</div>
-			<div class="col-12 col-md-4 values-col text-center">
+			<div class="col-12 col-md-4 values-col text-center grow">
 				<h4>EFFICIENCY</h4>
 				<img class="rounded" src="images/efficient_image.png">
 				<div>
@@ -380,7 +400,7 @@
 					the best quality product with the least amount of waste.
 				</div>
 			</div>
-			<div class="col-12 col-md-4 values-col text-center">
+			<div class="col-12 col-md-4 values-col text-center grow">
 				<h4>TEAMWORK</h4>
 				<img class="rounded" src="images/teamwork_image.png">
 				<div>
@@ -784,77 +804,87 @@
 			<!--image 180x180-->
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.oracle.com/java/index.html" target="_blank">
-					<img class="rounded" src="images/java_image.png">
+					<img class="rounded grow" src="images/java_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://developer.android.com/index.html" target="_blank">
-					<img class="rounded" src="images/android_image.png">
+					<img class="rounded grow" src="images/android_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://developer.apple.com/swift/" target="_blank">
+					<img class="rounded grow" src="images/swift_icon.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://developer.apple.com/xcode" target="_blank">
+					<img class="rounded grow" src="images/xcode_icon.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.xml.com/" target="_blank">
-					<img class="rounded" src="images/xml_image.png">
+					<img class="rounded grow" src="images/xml_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.w3.org/html/" target="_blank">
-					<img class="rounded" src="images/html5_image.png">
+					<img class="rounded grow" src="images/html5_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
-					<img class="rounded" src="images/css3_image.png">
+					<img class="rounded grow" src="images/css3_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.javascript.com/" target="_blank">
-					<img class="rounded" src="images/javascript_image.png">
+					<img class="rounded grow" src="images/javascript_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.microsoft.com/net/core#macos" target="_blank">
-					<img class="rounded" src="images/csharp_image.png">
+					<img class="rounded grow" src="images/csharp_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://getbootstrap.com/" target="_blank">
-					<img class="rounded" src="images/bootstrap_image.png">
+					<img class="rounded grow" src="images/bootstrap_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://jquery.com/" target="_blank">
-					<img class="rounded" src="images/jquery_image.png">
+					<img class="rounded grow" src="images/jquery_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://firebase.google.com/" target="_blank">
-					<img class="rounded" src="images/firebase_image.png">
+					<img class="rounded grow" src="images/firebase_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.sqlite.org/" target="_blank">
-					<img class="rounded" src="images/sqlite_image.png">
+					<img class="rounded grow" src="images/sqlite_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://github.com/" target="_blank">
-					<img class="rounded" src="images/github_image.png">
+					<img class="rounded grow" src="images/github_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.jetbrains.com/idea/" target="_blank">
-					<img class="rounded" src="images/intellij_image.png">
+					<img class="rounded grow" src="images/intellij_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="https://www.visualstudio.com/" target="_blank">
-					<img class="rounded" src="images/visual_studio_image.png">
+					<img class="rounded grow" src="images/visual_studio_image.png">
 				</a>
 			</div>
 			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
 				<a href="http://www.eclipse.org/downloads/eclipse-packages/" target="_blank">
-					<img class="rounded" src="images/eclipse_image.png">
+					<img class="rounded grow" src="images/eclipse_image.png">
 				</a>
 			</div>
 		</div>
@@ -864,6 +894,27 @@
 	<!--Work History-->
 	<div class="container-fluid light-color" id="work-history-section">
 		<h3 class="text-center header-top-margin">Work History</h3>
+
+		<div class="row">
+			<div class="col-12 col-md-4 text-center">
+				<img class="fill" style="border-radius:0px;" src="images/csusm_logo.jpeg">
+			</div>
+			<div class="col-12 col-md-8">
+				<p class="text_company">California State University, San Marcos - San Marcos, CA</p>
+				<p class="text_title">2018 - Present Software Development Mentor</p>
+				<p class="text_description">Mentored, trained, and encouraged high school females to pursue their interest in a software development</p>
+				<ul class="text_description">
+					<li>Educated and mentored more than 16 high school females at 2 different schools on software development, design, and implementation using Microsoft Touch Develop and Greenfoot IDE's.</li>
+					<li>Collaborated with local NPO’s to devise projects for the participants.
+					</li>
+					<li>Promoted team-building exercises, increasing cohesiveness and nurturing group-oriented development techniques.  
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<hr style="margin-left:200px; margin-right:200px;">
+
 		<div class="row">
 			<div class="col-12 col-md-4 text-center">
 				<img class="fill" style="border-radius:0px;" src="images/sound_logo.png">
@@ -939,7 +990,7 @@
 		<div class="row justify-content-center">
 			<div class="col-4 text-center">
 				<div class="row justify-content-center">
-					<a id="linkedin-link" href="https://www.linkedin.com/in/michael-adam-jones/" target="_blank">
+					<a href="https://www.linkedin.com/in/michael-adam-jones/" target="_blank">
 						<span class="fa fa-linkedin contact-icon" aria-hidden="true" style="color:#424140"></span>
 					</a>
 				</div>
@@ -950,7 +1001,7 @@
 
 			<div class="col-4 text-center">
 				<div class="row justify-content-center">
-					<a id="email-link" href="mailto:Dev.Michael.Jones@gmail.com">
+					<a href="mailto:Dev.Michael.Jones@gmail.com">
 						<span class="fa fa-envelope contact-icon" aria-hidden="true" style="color:#424140"></span>
 					</a>
 				</div>
@@ -960,7 +1011,7 @@
 			</div>
 			<div class="col-4 text-center">
 				<div class="row justify-content-center">
-					<a id="resume-link" href="https://docs.google.com/document/d/1YOMxylUuPqyxFHdy5pEhgG_hVNbHUx6sjG093vwjhWs/edit?usp=sharing"
+					<a href="https://docs.google.com/document/d/1NMz8FQMmkdMOuF06vkN4JQ_ihoaCYFNQKMWjzwc4AsQ/edit?usp=sharing"
 					 target="_blank">
 						<span class="fa fa-file-text contact-icon" aria-hidden="true" style="color:#424140"></span>
 					</a>
