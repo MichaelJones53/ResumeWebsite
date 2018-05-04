@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115095001-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-115095001-1');
+    </script>
+
+
+    <title>About Michael Jones</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <style>
+        html,
+        body {
+
+            height: 100%;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            display: none;
+        }
+
+        .navbar {
+            background-color: rgba(87, 87, 87, 0.651) !important;
+            opacity: .7;
+            width: 100%;
+        }
+
+        .nav-link {
+            color: white !important;
+            transition: .5s;
+        }
+
+        .nav-link:hover {
+            color: grey !important;
+        }
+
+        .top-section{
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+            background-image: url(../images/beach_boat_image.jpg);
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transition:  2s ease-in-out;
+        }
+        .top-section-inner{
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            color:white;
+            font-size: 50px;
+            
+        }
+
+        .grow{
+            transform: scale(1.1);
+        }
+        
+        .hide-element{
+            opacity: 0;
+        }
+
+        .show-element{
+            opacity: 1;
+        }
+
+        footer {
+            padding: 25px 15px;
+            background-color: rgb(37, 37, 37);
+            color: rgb(255, 255, 255);
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .footer-content {
+            color: rgb(194, 192, 192);
+        }
+
+        #nav-logo-image {
+            height: 40px;
+        }
+
+        .spacer {
+            height: 500px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-md navbar-light position-fixed bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="../images/wave_logo.png" id="nav-logo-image" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">About
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link" href="#">Skills</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--container for first paralax image-->
+    <div class="top-section" id="boat-container">
+    </div>
+
+    <div class="top-section-inner">
+            About
+    </div>
+
+    <div class="spacer"></div>
+
+
+
+
+
+
+
+
+    <!--footer-->
+    <footer>
+
+        <div class="contianer">
+            <div class="row">
+                <div class="col-6">
+                    Proudly created by:
+                    <span class="footer-content">Michael Jones</span>
+                    <br> Phone:
+                    <span class="footer-content">(757) 582-2744</span>
+                    <br> Email:
+                    <a href="mailto:dev.michael.jones@gmail.com">Dev.Michael.Jones@gmail.com</a>
+                </div>
+                <div class="col-6">
+                    location:
+                    <span class="footer-content">San Diego, CA</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script>
+
+
+
+        $(document).ready(function () {
+            $('body').fadeIn(400, function () {
+                $('.top-section').addClass('grow');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
