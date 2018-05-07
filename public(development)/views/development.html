@@ -12,14 +12,22 @@
     </script>
 
 
-    <title>About Michael Jones</title>
+    <title>Michael Jones Website and Mobile Developer</title>
+    <meta name="description" content="San Diego, California based web and mobile developer, leveraging technology or a better life">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!--scroll reveal-->
+    <script src="../js/scrollreveal.min.js"></script>
+
+    <!-- progress bar
+    <script src="../js/progress.js"></script> -->
+
     <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -31,9 +39,8 @@
     <style>
         html,
         body {
-
             height: 100%;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Josefin Sans', sans-serif;
         }
 
         body {
@@ -41,57 +48,81 @@
         }
 
         .navbar {
-            background-color: rgba(87, 87, 87, 0.651) !important;
-            opacity: .7;
             width: 100%;
+            transition: background-color 1s linear;
+            z-index: 1;
+
+        }
+
+        .nav-transparent {
+            background-color: rgb(0, 140, 255, .15);
+            -webkit-transition: background-color .5s;
+            -moz-transition: background-color .5s;
+            -ms-transition: background-color .5s;
+            -o-transition: background-color .5s;
+            transition: background-color .5s;
+        }
+
+
+
+        .show-navbar {
+            background-color: rgb(0, 140, 255);
+            -webkit-transition: background-color .5s;
+            -moz-transition: background-color .5s;
+            -ms-transition: background-color .5s;
+            -o-transition: background-color .5s;
+            transition: background-color .5s;
         }
 
         .nav-link {
             color: white !important;
-            transition: .5s;
+
         }
 
         .nav-link:hover {
             color: grey !important;
         }
 
-        .top-section{
+        .top-section {
             position: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 500px;
+            height: 100%;
             background-image: url(../images/beach_boat_image.jpg);
             background-size: cover;
             background-position: center;
             z-index: -1;
-            transition:  2s ease-in-out;
+            transition: 2s ease-in-out;
         }
-        .top-section-inner{
+
+        .top-section-inner {
             position: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             width: 100%;
-            height: 500px;
-            background-size: cover;
-            background-position: center;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
             z-index: -1;
-            color:white;
+            color: white;
             font-size: 50px;
-            
+            padding: 100px;
+            transition: .5s;
+
         }
 
-        .grow{
-            transform: scale(1.1);
+        .grow {
+            transform: scale(1.05);
         }
-        
-        .hide-element{
+
+        .hide-element {
             opacity: 0;
         }
 
-        .show-element{
+        .show-element {
             opacity: 1;
         }
 
@@ -103,16 +134,236 @@
             text-align: center;
         }
 
+        .page-content {
+            background-color: rgb(241, 241, 241);
+
+        }
+
         .footer-content {
             color: rgb(194, 192, 192);
         }
 
         #nav-logo-image {
             height: 40px;
+
+            z-index: 2;
         }
 
+        .navbar-brand {}
+
         .spacer {
-            height: 500px;
+            height: 100%;
+        }
+
+        .section2-icon {
+            width: 30%;
+        }
+
+        .centered-content {
+            padding: 0;
+            text-align: center;
+        }
+
+        .icon-header {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .icon-info {
+            padding: 10px;
+
+        }
+
+        .show {
+            opacity: 1;
+        }
+
+        .expand-on-hover {
+            transition: .5s;
+        }
+
+        .expand-on-hover:hover {
+            transform: scale(1.05);
+
+        }
+
+        .group-header {
+            font-size: 4vw;
+            color: white;
+            background-color: rgb(0, 140, 255);
+            background: linear-gradient(to bottom, rgb(0, 140, 255), rgba(0, 204, 255), rgb(241, 241, 241));
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            transition: .5s;
+        }
+
+        .row-container {
+            padding: 20px 30px;
+        }
+
+
+
+        #scroll-down-indicator {
+            width: 100%;
+
+        }
+
+        #scroll-down-indicator::before {
+            content: '╲╱';
+            color: #fff;
+            position: absolute;
+            font-weight: bolder;
+            text-shadow: 0 0 6px rgba(0, 0, 0, 1);
+            font-size: 30px;
+            width: 60px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -30px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .polygon-container {
+            position: absolute;
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+            transition: 1s;
+        }
+
+        .process-image-container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .overlay {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.37);
+            color: white;
+            font-size: 6vw;
+            padding-right: 10%;
+            height: 100%;
+            width: 100%;
+            transition: .5s;
+        }
+
+        .process-image-wrapper {
+            position: relative;
+            height: 300px;
+            transition: 1s;
+        }
+
+        .offscreen-container {
+            left: -25%;
+            opacity: .3;
+        }
+
+        .onscreen-container {
+            left: 0;
+            opacity: 1;
+        }
+
+
+
+
+        .no-row-padding {
+            padding: 0;
+        }
+
+        #planning-image-container {
+            background-image: url("../images/planning_image.jpg");
+            min-height: 100%;
+            min-width: 100%;
+            background-size: cover;
+        }
+
+        #designing-image-container {
+            background-image: url("../images/design_large_image.jpg");
+            min-height: 100%;
+            min-width: 100%;
+            background-size: cover;
+        }
+
+        #developing-image-container {
+            background-image: url("../images/develop_large_image.jpg");
+            min-height: 100%;
+            min-width: 100%;
+            background-size: cover;
+        }
+
+        #releasing-image-container {
+            background-image: url("../images/fireworks_image.jpg");
+            min-height: 100%;
+            min-width: 100%;
+            background-size: cover;
+        }
+
+        .process-info-container {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .process-info-img-container {
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 30%;
+        }
+
+        .process-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 60%;
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 767px) {
+            .top-section-inner {
+                font-size: 30px;
+            }
+
+            .group-header {
+                font-size: 25px;
+            }
+            .polygon-container {
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                transition: 1s;
+            }
+            .overlay {
+                font-size: 15vw;
+                padding: 0;
+            }
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(-30%);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
     </style>
 
@@ -121,7 +372,7 @@
 
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand-md navbar-light position-fixed bg-primary">
+    <nav class="navbar nav-transparent navbar-expand-md navbar-light position-fixed">
         <a class="navbar-brand" href="#">
             <img src="../images/wave_logo.png" id="nav-logo-image" alt="">
         </a>
@@ -131,7 +382,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">About
+                <a class="nav-item nav-link active" href="./development.html">Development
                     <span class="sr-only">(current)</span>
                 </a>
                 <a class="nav-item nav-link" href="#">Skills</a>
@@ -140,21 +391,203 @@
         </div>
     </nav>
 
-    <!--container for first paralax image-->
+    <!--first paralax images 500px height-->
     <div class="top-section" id="boat-container">
     </div>
-
     <div class="top-section-inner">
-            About
+        Leveraging Technology For A Better Life
     </div>
 
+    <div id="scroll-down-indicator" onclick="scrollDown()">
+
+    </div>
+
+    </div>
     <div class="spacer"></div>
 
+    <div class="group-header">
+        Design Oriented
+    </div>
+    <!--start page content-->
+    <div class="page-content">
+
+
+        <!--1st section-->
+        <div class="container-fluid">
+            <div class="row centered-content row-container">
+                <div class="col-md icon-container">
+                    <div class="expand-on-hover">
+                        <img class="section2-icon" src="../images/responsive_image.png" alt="response design">
+                        <div class="icon-header">Responsive Design</div>
+                        <div class="icon-info">Products should look beautifully and function smoothly no matter what kind of device is being used</div>
+                    </div>
+                </div>
+                <div class="col-md icon-container">
+                    <div class="expand-on-hover">
+                        <img class="section2-icon" src="../images/design_image.png" alt="User Expereince image">
+                        <div class="icon-header">User Experience</div>
+                        <div class="icon-info">Users receive the best experience to keep them coming back again and again</div>
+                    </div>
+                </div>
+                <div class="col-md icon-container">
+                    <div class="expand-on-hover">
+                        <img class="section2-icon" src="../images/animation_image.png" alt="alterations image">
+                        <div class="icon-header">Animations</div>
+                        <div class="icon-info">Warm experiences and drawing the eye are potent tools for engaging your clients effectively</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--2nd section-->
+        <div class="group-header">
+            Process
+        </div>
+        <div class="container-fluid">
+
+            <!--Planning row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+                    <div class="process-image-wrapper polygon-container offscreen-container" id="planning-image-container">
+                        <div class="process-image-container">
+                            <div class="overlay">
+                                Planning
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/plan_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                Understanding your vision, business, and market to ensure you get the best results.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--Designing row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+                    <div class="process-image-wrapper polygon-container offscreen-container" id="designing-image-container">
+                        <div class="process-image-container ">
+                            <div class="overlay">
+                                Designing
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/design_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                Wireframes and prototypes will be created and sent to you for approval.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Development row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+                    <div class="process-image-wrapper polygon-container offscreen-container" id="developing-image-container">
+                        <div class="process-image-container">
+                            <div class="overlay">
+                                Developing
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/coding_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                Build the product to the specfications agreeded upon, then final approval of working product.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--Deployment row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+                    <div class="process-image-wrapper polygon-container offscreen-container" id="releasing-image-container">
+                        <div class="process-image-container">
+                            <div class="overlay">
+                                Releasing
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/deploy_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                Send your product out into the world!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
 
 
 
 
 
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </div>
+    <!--end page content-->
 
 
     <!--footer-->
@@ -180,15 +613,80 @@
     </footer>
 
 
+    <!--My Scripts-->
     <script>
+        window.sr = ScrollReveal({
+            reset: false,
+            duration: 2000
+        });
 
+
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
 
 
         $(document).ready(function () {
-            $('body').fadeIn(400, function () {
-                $('.top-section').addClass('grow');
+
+
+
+            $(window).scroll(function () {
+                // checks if window is scrolled more than 500px, adds/removes solid class
+                var scrollTop = $(window).scrollTop();
+                var winHeight = $(window).height();
+                var scrollBottom = scrollTop + winHeight;
+                if (scrollTop > winHeight && $('.navbar').hasClass('nav-transparent')) {
+                    // $('.navbar').removeClass('nav-transparent');
+                    $('.navbar').addClass('show-navbar');
+                } else if (scrollTop < winHeight && $('.navbar').hasClass('show-navbar')) {
+                    $('.navbar').removeClass('show-navbar');
+                    //   $('.navbar').addClass('nav-transparent');
+
+                }
+
+                $('.process-image-wrapper').each(function () {
+                    var elem = $(this);
+                    var elemOffset = elem.offset();
+
+
+                    if (elemOffset.top < (scrollBottom - 100) && elem.hasClass('offscreen-container')) {
+                        elem.removeClass('offscreen-container');
+                        elem.addClass('onscreen-container');
+                    } else if (elemOffset.top > scrollBottom && elem.hasClass('onscreen-container')) {
+                        elem.removeClass('onscreen-container');
+                        elem.addClass('offscreen-container');
+                    }
+                });
+
+
+
+
+
+
             });
+
+            sr.reveal('.icon-container');
+            $('body').fadeIn(400);
+            $('.top-section').addClass('grow');
+
         });
+
+
+        function isInView(e) {
+            var elemOffset = e.offset();
+            var scrollTop = $(window).scrollTop();
+
+            var winHeight = $(window).height();
+            var scrollBottom = scrollTop + winHeight;
+
+
+            return elemOffset.top > scrollBottom;
+        }
+
+        function scrollDown() {
+            var top = $(window).height();
+            $("html, body").animate({ scrollTop: top + "px" }, 1500, 'swing');
+        }
 
     </script>
 </body>

@@ -12,7 +12,7 @@
 		gtag('config', 'UA-115095001-1');
 	</script>
 
-	<title>Michael Jones | Software Developer | San Diego, CA</title>
+	<title>Michael Jones | Website Developer | Moblie Developer | San Diego, CA</title>
 	<meta name="description" content="A web, mobile, and software developer located in San Diego, California.">
 
 	<!-- Required meta tags -->
@@ -21,7 +21,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./js/jquery.animate-colors.js"></script>
 	<!--Google Font-->
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+	
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -34,11 +35,11 @@
 		html,
 		body {
 			height: 100%;
-			font-family: 'Playfair Display', serif;
+			font-family: 'Josefin Sans', sans-serif;
 			color: rgb(243, 243, 231);
 		}
 		button{
-			font-family: 'Playfair Display', serif;
+			font-family: 'Josefin Sans', sans-serif;
 		}
 
 		#bgVideoContainer {
@@ -51,8 +52,6 @@
 			height: auto;
 			z-index: -1;
 			transform: translateX(-50%) translateY(-50%);
-
-			/*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
 			background-size: cover;
 			transition: 1s opacity;
 		}
@@ -78,7 +77,7 @@
 		}
 
 		#name-container {
-			font-size: 50px;
+			font-size: 5vw;
 			text-align: center;
 			transition: .5s;
 			opacity: 0;
@@ -89,17 +88,17 @@
 		#title-container {
 			opacity: 0;
 			text-align: center;
-			font-size: 45px;
+			font-size: 4vw;
 			font-weight: bold;
 			transition: .5s;
-			color: rgb(247, 8, 8);
+			color: rgb(43, 40, 83);
 		}
 
 		#build-container {
 			margin-top: -5px;
 			opacity: 0;
 			text-align: center;
-			font-size: 40px;
+			font-size: 4vw;
 			transition: .5s;
 			
 		}
@@ -124,29 +123,29 @@
 
 		#enter-button:hover{
 			color: rgb(243, 243, 231);
-			background-color: rgb(190, 51, 51);
+			background-color: rgb(43, 40, 83);
 			border-radius: 5px 13px;
 			transition: .5s;
 		}
 
 		@media (max-width: 650px) {
 			#name-container {
-				font-size: 30px;
+				font-size: 40px;
 			}
 			#title-container {
-				font-size: 20px;
+				font-size: 30px;
 
 			}
 			#build-container {
 
-				font-size: 20px;
+				font-size: 24px;
 
 			}
 			#cursor-indicator {
-				font-size: 25px;
+				font-size: 35px;
 			}
 			#enter-button{
-				font-size: 20px;
+				font-size: 30px;
 			}
 
 		}
@@ -158,7 +157,7 @@
 <body>
 
 	<video autoplay muted loop id="bgVideoContainer">
-		<source src="./videos/planet_bg_video.mp4" type="video/mp4" id="bgVideo"> Your browser does not support HTML5 video.
+		<source src="./videos/beach_video.mp4" type="video/mp4" id="bgVideo"> Your browser does not support HTML5 video.
 	</video>
 
 
@@ -255,7 +254,6 @@
 			}
 
 		}
-
 		function blink() {
 			if (!isTextIndicatorVisible) {
 				$('#cursor-indicator').animate({
