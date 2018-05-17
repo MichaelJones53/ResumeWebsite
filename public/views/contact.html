@@ -43,7 +43,6 @@
     <style>
         html,
         body {
-            height: 100%;
             font-family: 'Josefin Sans', sans-serif;
         }
 
@@ -52,7 +51,7 @@
         }
 
         .navbar {
-            width: 100%;
+            width: 100vw;
             transition: background-color 1s linear;
             z-index: 2;
 
@@ -87,18 +86,26 @@
             color: grey !important;
         }
 
-        .top-section {
+        .top-section-container {
+            overflow: hidden;
             position: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100%;
+            z-index: -1;
+        }
+
+        .top-section {
+
             background-image: url(../images/skills_image.jpeg);
             background-size: cover;
             background-position: center;
-            z-index: -1;
+            width: 100%;
+            height: 100%;
             transition: 2s ease-in-out;
+
         }
 
         .top-section-inner {
@@ -107,13 +114,14 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
             z-index: -1;
             color: white;
             font-size: 6vw;
             transition: .1s;
+            overflow: hidden;
 
         }
 
@@ -131,6 +139,7 @@
             font-size: 10px;
             text-align: center;
             z-index: 2;
+            min-height: 10vh;
         }
 
 
@@ -169,20 +178,20 @@
             .group-header {
                 font-size: 25px;
             }
-            .icon-container{
-                padding:0 !important;
+            .icon-container {
+                padding: 0 !important;
             }
             .icon-label-content {
-            font-size: 4vw;
-            
-            
-        }
+                font-size: 4vw;
+
+
+            }
 
         }
 
         .contact-content {
             padding: 65px 30px;
-            min-height: 100%;
+            min-height: 90vh;
         }
 
         .contact-tagline {
@@ -221,12 +230,12 @@
         .icon-item {
             text-align: center;
             font-size: 50px;
-            padding:0;
+            padding: 0;
         }
 
         .icon-label {
             font-size: 2.2vw;
-            padding:0;
+            padding: 0;
         }
 
         .icon-label-content {
@@ -270,7 +279,9 @@
     </nav>
 
     <!--first paralax images 500px height-->
-    <div class="top-section" id="boat-container">
+    <div class="top-section-container">
+        <div class="top-section" id="boat-container">
+        </div>
     </div>
     <div class="top-section-inner"></div>
     <div class="contact-content">
@@ -297,7 +308,7 @@
                         </div>
                     </form>
                 </div>
-                
+
                 <div class="col-md-6" style="padding-top: 50px;">
                     <!--Location-->
                     <div class="row icon-container align-items-center">
@@ -314,7 +325,7 @@
                     <!--Phone Number-->
                     <div class="row icon-container align-items-center">
                         <div class="col-4 icon-item">
-                                <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone"></i>
                         </div>
                         <div class="col-8 icon-label center-block">
                             <div class="icon-label-content">
@@ -326,7 +337,7 @@
 
                     <div class="row icon-container align-items-center">
                         <div class="col-4 icon-item">
-                                <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div class="col-8 icon-label center-block">
                             <div class="icon-label-content">

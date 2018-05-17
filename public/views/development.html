@@ -40,15 +40,21 @@
         html,
         body {
             height: 100%;
+            max-width: 100%;
             font-family: 'Josefin Sans', sans-serif;
         }
+        body{
+            overflow-x: hidden;
+        }
+        
 
         body {
+            
             display: none;
         }
 
         .navbar {
-            width: 100%;
+            width: 100vw;
             transition: background-color 1s linear;
             z-index: 2;
 
@@ -83,17 +89,24 @@
             color: grey !important;
         }
 
-        .top-section {
+        .top-section-container{
+            width: 100vw;
+            height: 100%;
             position: fixed;
             display: flex;
             align-items: center;
+            overflow: hidden;
             justify-content: center;
+            z-index: -1;
+        }
+        .top-section {
+            
             width: 100%;
             height: 100%;
             background-image: url(../images/beach_boat_image.jpg);
             background-size: cover;
             background-position: center;
-            z-index: -1;
+            overflow: hidden;
             transition: 2s ease-in-out;
         }
 
@@ -400,6 +413,7 @@
             padding: 0 30px;
         }
 
+        
 
         @keyframes bounce {
             50% {
@@ -436,7 +450,9 @@
     </nav>
 
     <!--first paralax images 500px height-->
-    <div class="top-section" id="boat-container">
+    <div class="top-section-container">
+        <div class="top-section" id="boat-container">
+        </div>
     </div>
     <div class="top-section-inner">
         Leveraging Technology For A Better Life
