@@ -169,36 +169,18 @@
             transition: .5s;
         }
 
-
-        @media (max-width: 767px) {
-            .top-section-inner {
-                font-size: 30px;
-            }
-
-            .group-header {
-                font-size: 25px;
-            }
-            .icon-container {
-                padding: 0 !important;
-            }
-            .icon-label-content {
-                font-size: 4vw;
-
-
-            }
-
-        }
-
         .contact-content {
             padding: 65px 30px;
             min-height: 90vh;
         }
+       
 
         .contact-tagline {
             font-size: 3vw;
             text-align: center;
             padding: 30px;
             color: white;
+            transition: .5s;
         }
 
         .submit-button {
@@ -241,6 +223,36 @@
         .icon-label-content {
             transition: .5s;
             text-align: left;
+
+        }
+
+        .icon-label-content > a{
+            color: rgb(184, 182, 182);
+            transition: .5s;
+        }
+
+        .icon-label-content > a:hover{
+            color:white;
+            font-size: 2.3vw;
+                    }
+        @media (max-width: 767px) {
+            .top-section-inner {
+                font-size: 30px;
+            }
+
+            .group-header {
+                font-size: 25px;
+            }
+            .icon-container {
+                padding: 0 !important;
+            }
+            .icon-label-content {
+                font-size: 4vw;
+            }
+            .contact-tagline{
+                font-size: 5.5vw;
+            }
+            
 
         }
 
@@ -329,7 +341,7 @@
                         </div>
                         <div class="col-8 icon-label center-block">
                             <div class="icon-label-content">
-                                (757)-582-2744
+                                <a href="tel: 1-757-582-2744">1-757-582-2744</a>
                             </div>
 
                         </div>
@@ -365,7 +377,7 @@
                     Proudly created by:
                     <span class="footer-content">Michael Jones</span>
                     <br> Phone:
-                    <span class="footer-content">(757) 582-2744</span>
+                    <span class="footer-content"><a href="tel: 1-757-582-2744">1-757-582-2744</a></span>
                     <br> Email:
                     <a href="mailto:dev.michael.jones@gmail.com">Dev.Michael.Jones@gmail.com</a>
                 </div>

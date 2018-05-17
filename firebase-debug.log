@@ -1,0 +1,35 @@
+[debug] [2018-05-17T22:00:31.436Z] ----------------------------------------------------------------------
+[debug] [2018-05-17T22:00:31.440Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-05-17T22:00:31.441Z] CLI Version:   3.18.4
+[debug] [2018-05-17T22:00:31.441Z] Platform:      darwin
+[debug] [2018-05-17T22:00:31.441Z] Node Version:  v6.11.2
+[debug] [2018-05-17T22:00:31.442Z] Time:          Thu May 17 2018 15:00:31 GMT-0700 (PDT)
+[debug] [2018-05-17T22:00:31.443Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-17T22:00:31.464Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-17T22:00:31.464Z] > authorizing via signed-in user
+[debug] [2018-05-17T22:00:31.468Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-17T22:00:31.469Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/O5TgOOT372OWJwKebfc9_L6IIbhpx7UmSNH0Q4l3iIg-1y_APSEcvrKqqiqvJUZr',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu May 17 2018 15:00:31 GMT-0700 (PDT)
+[debug] [2018-05-17T22:00:31.687Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-17T22:00:31.708Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pointerjoneswebsite  
+  
+ Thu May 17 2018 15:00:31 GMT-0700 (PDT)
+[debug] [2018-05-17T22:00:32.375Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-17T22:00:32.377Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pointerjoneswebsite/tokens  
+  
+ Thu May 17 2018 15:00:32 GMT-0700 (PDT)
+[debug] [2018-05-17T22:00:33.772Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'pointerjoneswebsite'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-05-17T22:00:36.522Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/pointerjoneswebsite/uploads/-LCk6bIH9omI4IQjq1Um?fileCount=86&message=  
+  
+ Thu May 17 2018 15:00:36 GMT-0700 (PDT)
