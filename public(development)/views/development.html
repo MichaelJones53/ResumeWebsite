@@ -12,8 +12,8 @@
     </script>
 
 
-    <title>Michael Jones Website and Mobile Developer</title>
-    <meta name="description" content="San Diego, California based web and mobile developer, leveraging technology or a better life">
+    <title>Development | Michael Jones Website Developer and Mobile Developer</title>
+    <meta name="description" content="San Diego, California based web and mobile developer, leveraging technology for a better life">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -50,7 +50,7 @@
         .navbar {
             width: 100%;
             transition: background-color 1s linear;
-            z-index: 1;
+            z-index: 2;
 
         }
 
@@ -108,9 +108,9 @@
             background-color: rgba(0, 0, 0, 0.1);
             z-index: -1;
             color: white;
-            font-size: 50px;
+            font-size: 6vw;
             padding: 100px;
-            transition: .5s;
+            transition: .1s;
 
         }
 
@@ -127,11 +127,13 @@
         }
 
         footer {
+            position: relative;
             padding: 25px 15px;
             background-color: rgb(37, 37, 37);
             color: rgb(255, 255, 255);
             font-size: 10px;
             text-align: center;
+            z-index: 2;
         }
 
         .page-content {
@@ -145,11 +147,8 @@
 
         #nav-logo-image {
             height: 40px;
-
             z-index: 2;
         }
-
-        .navbar-brand {}
 
         .spacer {
             height: 100%;
@@ -167,12 +166,11 @@
         .icon-header {
             padding: 10px;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 2.8vw;
         }
 
         .icon-info {
             padding: 10px;
-
         }
 
         .show {
@@ -194,14 +192,12 @@
             background-color: rgb(0, 140, 255);
             background: linear-gradient(to bottom, rgb(0, 140, 255), rgba(0, 204, 255), rgb(241, 241, 241));
             width: 100%;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             transition: .5s;
         }
 
-        .row-container {
-            padding: 20px 30px;
-        }
+        
 
 
 
@@ -229,16 +225,34 @@
         }
 
         .polygon-container {
-            position: absolute;
+            position: relative;
+            z-index: 1;
+            transition: 1s;
             -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-            transition: 1s;
+
+        }
+
+    
+
+        .shadow {
+            position: absolute;
+            z-index: 0;
+            height: 100%;
+            width: 101%;
+            content: "";
+            left: 0;
+            top: 20px;
+            background-color: rgba(0, 0, 0, 0.158);
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
         }
 
         .process-image-container {
             position: absolute;
             height: 100%;
             width: 100%;
+
 
         }
 
@@ -256,9 +270,24 @@
             transition: .5s;
         }
 
+        .process-info-container {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+
+
+        }
+
         .process-image-wrapper {
             position: relative;
-            height: 300px;
+            height: 100%;
+            min-height: 300px;
             transition: 1s;
         }
 
@@ -290,6 +319,7 @@
             background-image: url("../images/design_large_image.jpg");
             min-height: 100%;
             min-width: 100%;
+
             background-size: cover;
         }
 
@@ -297,6 +327,7 @@
             background-image: url("../images/develop_large_image.jpg");
             min-height: 100%;
             min-width: 100%;
+
             background-size: cover;
         }
 
@@ -304,20 +335,11 @@
             background-image: url("../images/fireworks_image.jpg");
             min-height: 100%;
             min-width: 100%;
+
             background-size: cover;
         }
 
-        .process-info-container {
-            padding: 20px 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            width: 100%;
-            height: 100%;
 
-        }
 
         .process-info-img-container {
             display: flex;
@@ -327,6 +349,10 @@
             justify-content: center;
             width: 100%;
             height: 30%;
+        }
+
+        .container-fluid {
+            padding: 0;
         }
 
         .process-info {
@@ -343,19 +369,36 @@
                 font-size: 30px;
             }
 
+            .offscreen-container{
+                left: 0;
+            }
+
             .group-header {
                 font-size: 25px;
             }
             .polygon-container {
+                z-index: 1;
                 -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
                 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
                 transition: 1s;
             }
+            .shadow {
+                display: none;
+            }
             .overlay {
+                z-index: 1;
                 font-size: 15vw;
                 padding: 0;
             }
         }
+
+        .icon-container{
+            padding:30px 20px;
+        }
+        .row-container {
+            padding: 0 30px;
+        }
+
 
         @keyframes bounce {
             50% {
@@ -385,8 +428,8 @@
                 <a class="nav-item nav-link active" href="./development.html">Development
                     <span class="sr-only">(current)</span>
                 </a>
-                <a class="nav-item nav-link" href="#">Skills</a>
-                <a class="nav-item nav-link" href="#">Contact</a>
+                <a class="nav-item nav-link" href="./skills.html">Skills</a>
+                <a class="nav-item nav-link" href="./contact.html">Contact</a>
             </div>
         </div>
     </nav>
@@ -449,13 +492,18 @@
             <!--Planning row-->
             <div class="row centered-content">
                 <div class="col-md-6 no-row-padding">
-                    <div class="process-image-wrapper polygon-container offscreen-container" id="planning-image-container">
-                        <div class="process-image-container">
-                            <div class="overlay">
-                                Planning
+                    <div class="process-image-wrapper offscreen-container">
+
+                        <div class="polygon-container" id="planning-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Planning
+                                </div>
                             </div>
                         </div>
+                        <div class="shadow"></div>
                     </div>
+
                 </div>
 
 
@@ -480,17 +528,31 @@
             <!--Designing row-->
             <div class="row centered-content">
                 <div class="col-md-6 no-row-padding">
-                    <div class="process-image-wrapper polygon-container offscreen-container" id="designing-image-container">
-                        <div class="process-image-container ">
-                            <div class="overlay">
-                                Designing
+
+
+                    <div class="process-image-wrapper offscreen-container">
+                        <div class="polygon-container" id="designing-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Designing
+                                </div>
                             </div>
                         </div>
+                        <div class="shadow"></div>
                     </div>
+
+
+
+
+
+
                 </div>
 
 
+
+
                 <div class="col-md-6">
+
                     <div class="process-info-container icon-container">
                         <div class="expand-on-hover">
                             <div class="process-info-img-container">
@@ -510,13 +572,22 @@
             <!--Development row-->
             <div class="row centered-content">
                 <div class="col-md-6 no-row-padding">
-                    <div class="process-image-wrapper polygon-container offscreen-container" id="developing-image-container">
-                        <div class="process-image-container">
-                            <div class="overlay">
-                                Developing
+
+
+                    <div class="process-image-wrapper offscreen-container">
+                        <div class="polygon-container" id="developing-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Developing
+                                </div>
                             </div>
                         </div>
+                        <div class="shadow"></div>
                     </div>
+
+
+
+
                 </div>
 
 
@@ -541,13 +612,22 @@
             <!--Deployment row-->
             <div class="row centered-content">
                 <div class="col-md-6 no-row-padding">
-                    <div class="process-image-wrapper polygon-container offscreen-container" id="releasing-image-container">
-                        <div class="process-image-container">
-                            <div class="overlay">
-                                Releasing
+
+
+                    <div class="process-image-wrapper offscreen-container">
+                        <div class="polygon-container" id="releasing-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Releasing
+                                </div>
                             </div>
                         </div>
+                        <div class="shadow"></div>
                     </div>
+
+
+
+
                 </div>
 
 
@@ -591,7 +671,7 @@
 
 
     <!--footer-->
-    <footer>
+    <footer style="z-index: 2">
 
         <div class="contianer">
             <div class="row">
@@ -619,11 +699,6 @@
             reset: false,
             duration: 2000
         });
-
-
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        }
 
 
         $(document).ready(function () {
