@@ -29,6 +29,10 @@
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
 
+    <!--Font Awesome Glyphicons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -42,12 +46,13 @@
             height: 100%;
             font-family: 'Josefin Sans', sans-serif;
         }
-        body{
+
+        body {
             width: 100vw;
             display: none;
             overflow-x: hidden;
         }
-        
+
 
         .navbar {
             width: 100vw;
@@ -85,7 +90,7 @@
             color: grey !important;
         }
 
-        .top-section-container{
+        .top-section-container {
             width: 100vw;
             height: 100vh;
             position: fixed;
@@ -95,8 +100,21 @@
             justify-content: center;
             z-index: -1;
         }
+
+        .bg-image-overlay{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            justify-content: center;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+
         .top-section {
-            
+
             width: 100%;
             height: 100%;
             background-image: url(../images/beach_boat_image.jpg);
@@ -104,6 +122,16 @@
             background-position: center;
             overflow: hidden;
             transition: 2s ease-in-out;
+            
+        }
+        .top-section.first{
+            background-image: url(../images/beach_boat_image.jpg);
+            transition: 0s;
+        }
+
+        .top-section.next{
+            background-image: url(../images/skills_image.jpeg);
+            transition: 0s;
         }
 
         .top-section-inner {
@@ -125,6 +153,7 @@
 
         .grow {
             transform: scale(1.05);
+            
         }
 
         .hide-element {
@@ -143,11 +172,6 @@
             font-size: 10px;
             text-align: center;
             z-index: 2;
-        }
-
-        .page-content {
-            background-color: rgb(241, 241, 241);
-
         }
 
         .footer-content {
@@ -197,14 +221,16 @@
         }
 
         .group-header {
+            position: relative;
+            margin-bottom: 10px;
             font-size: 4vw;
             color: white;
             background-color: rgb(0, 140, 255);
-            background: linear-gradient(to bottom, rgb(0, 140, 255), rgba(0, 204, 255), rgb(241, 241, 241));
             width: 100%;
             padding: 25px;
             text-align: center;
             transition: .5s;
+            z-index: 0;
         }
 
 
@@ -350,8 +376,8 @@
         }
 
 
-        .page-content{
-            width:100vw;
+        .page-content {
+            width: 100vw;
             overflow: hidden;
         }
 
@@ -376,6 +402,79 @@
             width: 100%;
             height: 60%;
             padding-bottom: 20px;
+        }
+
+
+.icon-container {
+            padding: 30px 20px;
+        }
+        
+        .row-container {
+            padding: 0 30px;
+        }
+        .fill-bg-section{
+            background-color: rgb(241, 241, 241);
+        }
+
+        .contact-content {
+            padding: 65px 30px;
+            min-height: 90vh;
+        }
+    
+        .contact-tagline {
+            font-size: 3vw;
+            text-align: center;
+            padding: 40px 30px;
+            color: white;
+            transition: .5s;
+        }
+
+        .submit-button {
+            border: 2px white solid;
+            background-color: transparent;
+            color: white;
+            width: 200px;
+            transition: .3s;
+        }
+
+        .submit-button-container {
+            text-align: center;
+
+        }
+
+        .submit-button:hover {
+            background-color: rgb(0, 140, 255);
+            border-color: white;
+            color: white;
+            transition: .5s;
+
+        }
+
+        .form-icon-container {
+            color: white;
+            padding: 10px 0;
+        }
+
+        .form-icon-item {
+            text-align: center;
+            font-size: 50px;
+            padding: 0;
+        }
+
+        .form-icon-label {
+            font-size: 2.2vw;
+            padding: 0;
+        }
+
+        .form-icon-label-content {
+            transition: .5s;
+            text-align: left;
+            transition: .2s;
+
+        }
+        .form-icon-label-content > a{
+            
+            color:white;
         }
 
         @media (max-width: 767px) {
@@ -404,20 +503,27 @@
                 font-size: 15vw;
                 padding: 0;
             }
-            .icon-header{
+            .icon-header {
                 font-size: 25px;
+            }
+
+            
+            
+            .form-icon-container {
+                padding: 0 !important;
+            }
+            .form-icon-label-content {
+                font-size: 4vw;
+            }
+
+           
+            .contact-tagline{
+                font-size: 5.5vw;
             }
         }
 
-        .icon-container {
-            padding: 30px 20px;
-        }
-
-        .row-container {
-            padding: 0 30px;
-        }
-
         
+
 
         @keyframes bounce {
             50% {
@@ -458,6 +564,7 @@
         <div class="top-section" id="boat-container">
         </div>
     </div>
+    <div class="bg-image-overlay"></div>
     <div class="top-section-inner">
         Leveraging Technology For A Better Life
     </div>
@@ -466,229 +573,310 @@
 
     </div>
 
-    
+
     <div class="spacer"></div>
-    <div class="page-content">
-    <div class="group-header">
-        Design Oriented
-    </div>
-    <!--start page content-->
-    <div class="page-content">
+    
+        
+        <!--start page content-->
+        <div class="page-content">
 
+            
 
-        <!--1st section-->
-        <div class="container-fluid">
-            <div class="row centered-content row-container">
-                <div class="col-md icon-container">
-                    <div class="expand-on-hover">
-                        <img class="section2-icon" src="../images/responsive_image.png" alt="response design">
-                        <div class="icon-header">Responsive Design</div>
-                        <div class="icon-info">Products should look beautifully and function smoothly no matter what kind of device is being used</div>
+            <!--1st section-->
+            <div class="container-fluid fill-bg-section">
+                    <div class="group-header">
+                            Design Oriented
+                        </div>
+                <div class="row centered-content row-container">
+                    <div class="col-md icon-container">
+                        <div class="expand-on-hover">
+                            <img class="section2-icon" src="../images/responsive_image.png" alt="response design">
+                            <div class="icon-header">Responsive Design</div>
+                            <div class="icon-info">Products should look beautifully and function smoothly no matter what kind of device is being
+                                used</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md icon-container">
-                    <div class="expand-on-hover">
-                        <img class="section2-icon" src="../images/design_image.png" alt="User Expereince image">
-                        <div class="icon-header">User Experience</div>
-                        <div class="icon-info">Users receive the best experience to keep them coming back again and again</div>
+                    <div class="col-md icon-container">
+                        <div class="expand-on-hover">
+                            <img class="section2-icon" src="../images/design_image.png" alt="User Expereince image">
+                            <div class="icon-header">User Experience</div>
+                            <div class="icon-info">Users receive the best experience to keep them coming back again and again</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md icon-container">
-                    <div class="expand-on-hover">
-                        <img class="section2-icon" src="../images/animation_image.png" alt="alterations image">
-                        <div class="icon-header">Animations</div>
-                        <div class="icon-info">Warm experiences and drawing the eye are potent tools for engaging your clients effectively</div>
+                    <div class="col-md icon-container">
+                        <div class="expand-on-hover">
+                            <img class="section2-icon" src="../images/animation_image.png" alt="alterations image">
+                            <div class="icon-header">Animations</div>
+                            <div class="icon-info">Warm experiences and drawing the eye are potent tools for engaging your clients effectively</div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+            <!--2nd section-->
+            
+            <div class="container-fluid fill-bg-section">
+                    <div class="group-header">
+                            Process
+                        </div>
+                <!--Planning row-->
+                <div class="row centered-content">
+                    <div class="col-md-6 no-row-padding">
+                        <div class="process-image-wrapper offscreen-container">
+
+                            <div class="polygon-container" id="planning-image-container">
+                                <div class="process-image-container">
+                                    <div class="overlay">
+                                        Planning
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="process-info-container icon-container">
+                            <div class="expand-on-hover">
+                                <div class="process-info-img-container">
+
+                                    <img class="section2-icon" src="../images/plan_icon.png" alt="planning image">
+
+                                </div>
+                                <div class="process-info">
+                                    Understanding your vision, business, and market to ensure you get the best results.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!--Designing row-->
+                <div class="row centered-content">
+                    <div class="col-md-6 no-row-padding">
+
+
+                        <div class="process-image-wrapper offscreen-container">
+                            <div class="polygon-container" id="designing-image-container">
+                                <div class="process-image-container">
+                                    <div class="overlay">
+                                        Designing
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow"></div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col-md-6">
+
+                        <div class="process-info-container icon-container">
+                            <div class="expand-on-hover">
+                                <div class="process-info-img-container">
+
+                                    <img class="section2-icon" src="../images/design_icon.png" alt="planning image">
+
+                                </div>
+                                <div class="process-info">
+                                    Wireframes and prototypes will be created and sent to you for approval.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Development row-->
+                <div class="row centered-content">
+                    <div class="col-md-6 no-row-padding">
+
+
+                        <div class="process-image-wrapper offscreen-container">
+                            <div class="polygon-container" id="developing-image-container">
+                                <div class="process-image-container">
+                                    <div class="overlay">
+                                        Developing
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="process-info-container icon-container">
+                            <div class="expand-on-hover">
+                                <div class="process-info-img-container">
+
+                                    <img class="section2-icon" src="../images/coding_icon.png" alt="planning image">
+
+                                </div>
+                                <div class="process-info">
+                                    Build the product to the specfications agreeded upon, then final approval of working product.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!--Deployment row-->
+                <div class="row centered-content">
+                    <div class="col-md-6 no-row-padding">
+
+
+                        <div class="process-image-wrapper offscreen-container">
+                            <div class="polygon-container" id="releasing-image-container">
+                                <div class="process-image-container">
+                                    <div class="overlay">
+                                        Releasing
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow"></div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="process-info-container icon-container">
+                            <div class="expand-on-hover">
+                                <div class="process-info-img-container">
+
+                                    <img class="section2-icon" src="../images/deploy_icon.png" alt="planning image">
+
+                                </div>
+                                <div class="process-info">
+                                    Send your product out into the world!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <div class="group-header">
+                Contact
+            </div>
+
+
+            <div class="contact-content">
+                <div class="container-fluid">
+                    <div class="contact-tagline">
+                        I'd
+                        <i class="far fa-heart"></i> to help you with your next project!
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <form method="POST" action="https://formspree.io/dev.michael.jones@gmail.com">
+                                <div class="form-group">
+                                    <input name="Name" class="form-control" id="input-name" placeholder="Name">
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="Email" class="form-control" id="input-email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="Message" class="form-control" id="input-message" rows="10" placeholder="A brief description of your project..."></textarea>
+                                </div>
+                                <div class="submit-button-container">
+                                    <button type="submit" class="btn submit-button">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-md-6" style="padding-top: 50px;">
+                            <!--Location-->
+                            <div class="row form-icon-container align-items-center expand-on-hover">
+                                <div class="col-4 form-icon-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="col-8 form-icon-label center-block">
+                                    <div class="form-icon-label-content">
+                                        San Diego, California
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Phone Number-->
+                            <div class="row form-icon-container align-items-center expand-on-hover">
+                                <div class="col-4 form-icon-item">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="col-8 form-icon-label center-block">
+                                    <div class="form-icon-label-content">
+                                        <a href="tel: 1-757-582-2744">1-757-582-2744</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Email-->
+                            <div class="row form-icon-container align-items-center expand-on-hover">
+                                <div class="col-4 form-icon-item">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="col-8 form-icon-label center-block">
+                                    <div class="form-icon-label-content">
+                                        Dev.Michael.Jones@gmail.com
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
         </div>
 
 
-        <!--2nd section-->
-        <div class="group-header">
-            Process
-        </div>
-        <div class="container-fluid">
 
-            <!--Planning row-->
-            <div class="row centered-content">
-                <div class="col-md-6 no-row-padding">
-                    <div class="process-image-wrapper offscreen-container">
 
-                        <div class="polygon-container" id="planning-image-container">
-                            <div class="process-image-container">
-                                <div class="overlay">
-                                    Planning
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
 
-                </div>
 
 
-                <div class="col-md-6">
-                    <div class="process-info-container icon-container">
-                        <div class="expand-on-hover">
-                            <div class="process-info-img-container">
 
-                                <img class="section2-icon" src="../images/plan_icon.png" alt="planning image">
-
-                            </div>
-                            <div class="process-info">
-                                Understanding your vision, business, and market to ensure you get the best results.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!--Designing row-->
-            <div class="row centered-content">
-                <div class="col-md-6 no-row-padding">
-
-
-                    <div class="process-image-wrapper offscreen-container">
-                        <div class="polygon-container" id="designing-image-container">
-                            <div class="process-image-container">
-                                <div class="overlay">
-                                    Designing
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
-
-
-
-
-
-
-                </div>
-
-
-
-
-                <div class="col-md-6">
-
-                    <div class="process-info-container icon-container">
-                        <div class="expand-on-hover">
-                            <div class="process-info-img-container">
-
-                                <img class="section2-icon" src="../images/design_icon.png" alt="planning image">
-
-                            </div>
-                            <div class="process-info">
-                                Wireframes and prototypes will be created and sent to you for approval.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!--Development row-->
-            <div class="row centered-content">
-                <div class="col-md-6 no-row-padding">
-
-
-                    <div class="process-image-wrapper offscreen-container">
-                        <div class="polygon-container" id="developing-image-container">
-                            <div class="process-image-container">
-                                <div class="overlay">
-                                    Developing
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div class="col-md-6">
-                    <div class="process-info-container icon-container">
-                        <div class="expand-on-hover">
-                            <div class="process-info-img-container">
-
-                                <img class="section2-icon" src="../images/coding_icon.png" alt="planning image">
-
-                            </div>
-                            <div class="process-info">
-                                Build the product to the specfications agreeded upon, then final approval of working product.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!--Deployment row-->
-            <div class="row centered-content">
-                <div class="col-md-6 no-row-padding">
-
-
-                    <div class="process-image-wrapper offscreen-container">
-                        <div class="polygon-container" id="releasing-image-container">
-                            <div class="process-image-container">
-                                <div class="overlay">
-                                    Releasing
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div class="col-md-6">
-                    <div class="process-info-container icon-container">
-                        <div class="expand-on-hover">
-                            <div class="process-info-img-container">
-
-                                <img class="section2-icon" src="../images/deploy_icon.png" alt="planning image">
-
-                            </div>
-                            <div class="process-info">
-                                Send your product out into the world!
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-    </div>
-
-
-
-
-
-    </div>
+    
     <!--end page content-->
+
+
+
 
 
     <!--footer-->
@@ -712,7 +900,7 @@
 
         </div>
     </footer>
-</div>
+    </div>
 
     <!--My Scripts-->
     <script>
@@ -732,11 +920,17 @@
                 var winHeight = $(window).height();
                 var scrollBottom = scrollTop + winHeight;
                 if (scrollTop > winHeight && $('.navbar').hasClass('nav-transparent')) {
-                    // $('.navbar').removeClass('nav-transparent');
+                    $('#boat-container').addClass('next');
+                    $('#boat-container').removeClass('first');
                     $('.navbar').addClass('show-navbar');
+                    $('.top-section-inner').addClass('hide-element');
+
                 } else if (scrollTop < winHeight && $('.navbar').hasClass('show-navbar')) {
+                    $('.top-section-inner').removeClass('hide-element');
                     $('.navbar').removeClass('show-navbar');
-                    //   $('.navbar').addClass('nav-transparent');
+                    $('#boat-container').addClass('first');
+                    $('#boat-container').removeClass('next');
+                    
 
                 }
 

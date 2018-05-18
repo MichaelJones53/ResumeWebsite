@@ -1,0 +1,48 @@
+[debug] [2018-05-18T19:05:34.244Z] ----------------------------------------------------------------------
+[debug] [2018-05-18T19:05:34.246Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-05-18T19:05:34.247Z] CLI Version:   3.18.4
+[debug] [2018-05-18T19:05:34.247Z] Platform:      darwin
+[debug] [2018-05-18T19:05:34.247Z] Node Version:  v6.11.2
+[debug] [2018-05-18T19:05:34.248Z] Time:          Fri May 18 2018 12:05:34 GMT-0700 (PDT)
+[debug] [2018-05-18T19:05:34.248Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-18T19:05:34.261Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-18T19:05:34.261Z] > authorizing via signed-in user
+[debug] [2018-05-18T19:05:34.263Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-18T19:05:34.263Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/O5TgOOT372OWJwKebfc9_L6IIbhpx7UmSNH0Q4l3iIg-1y_APSEcvrKqqiqvJUZr',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri May 18 2018 12:05:34 GMT-0700 (PDT)
+[debug] [2018-05-18T19:05:34.486Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-18T19:05:34.503Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pointerjoneswebsite  
+  
+ Fri May 18 2018 12:05:34 GMT-0700 (PDT)
+[debug] [2018-05-18T19:05:36.059Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-18T19:05:36.061Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pointerjoneswebsite/tokens  
+  
+ Fri May 18 2018 12:05:36 GMT-0700 (PDT)
+[debug] [2018-05-18T19:05:36.491Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'pointerjoneswebsite'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-05-18T19:05:37.427Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/pointerjoneswebsite/uploads/-LCod9D5cBwGyYlKYkPV?fileCount=84&message=  
+  
+ Fri May 18 2018 12:05:37 GMT-0700 (PDT)
+[debug] [2018-05-18T19:05:44.536Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-18T19:05:44.537Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 84 files uploaded successfully
+[debug] [2018-05-18T19:05:45.537Z] [hosting] deploy completed after 8591ms
+[debug] [2018-05-18T19:05:45.539Z] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/pointerjoneswebsite/releases  
+ { hosting: 
+   { public: 'public',
+     ignore: [ 'firebase.json', '**/.*', '**/node_modules/**' ],
+     rewrites: [ [Object] ],
+     version: '-LCod9D5cBwGyYlKYkPV',
+     prefix: '-LCod9D5cBwGyYlKYkPV/',
+     manifest: [] } } 
+ Fri May 18 2018 12:05:45 GMT-0700 (PDT)
