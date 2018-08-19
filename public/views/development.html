@@ -476,7 +476,18 @@
             color:white;
         }
 
+        .project-container{
+            height: 200px;
+            width: 33%;
+            
+            background-color: blue;
+        }
+
         @media (max-width: 767px) {
+            .project-container{
+                width: 50%;
+            }
+
             .top-section-inner {
                 font-size: 30px;
             }
@@ -579,7 +590,7 @@
 
             
 
-            <!--1st section-->
+            <!--Values section-->
             <div class="container-fluid fill-bg-section">
                     <div class="group-header">
                             Development Values
@@ -610,8 +621,22 @@
                 </div>
             </div>
 
+            <!--Projects section-->
+            <div class="container-fluid fill-bg-section">
+                <div class="group-header">
+                    Projects
+                </div>  
 
-            <!--2nd section-->
+                <div class="row centered-content row-container">
+                <div class="project-container">
+                    <!--Begin with title here...-->
+
+                </div> 
+                </div>
+
+            </div>
+
+            <!--Process section-->
             
             <div class="container-fluid fill-bg-section">
                     <div class="group-header">
@@ -784,79 +809,83 @@
 
             </div>
 
-            <div class="group-header">
-                Contact
-            </div>
 
 
-            <div class="contact-content">
-                <div class="container-fluid">
-                    <div class="contact-tagline">
-                        I'd
-                        <i class="far fa-heart"></i> to help you with your next project!
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <form method="POST" action="https://formspree.io/dev.michael.jones@gmail.com">
-                                <div class="form-group">
-                                    <input name="Name" class="form-control" id="input-name" placeholder="Name">
-
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="Email" class="form-control" id="input-email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="Message" class="form-control" id="input-message" rows="10" placeholder="A brief description of your project..."></textarea>
-                                </div>
-                                <div class="submit-button-container">
-                                    <button type="submit" class="btn submit-button">Submit</button>
-                                </div>
-                            </form>
+            <!--Contact section-->
+            <div class="container-fluid fill-bg-section" style="background-color: transparent">
+                <div class="group-header">
+                    Contact
+                </div>
+                <div class="contact-content">
+                    <div class="container-fluid">
+                        <div class="contact-tagline">
+                            I'd
+                            <i class="far fa-heart"></i> to help you with your next project!
                         </div>
-
-                        <div class="col-md-6" style="padding-top: 50px;">
-                            <!--Location-->
-                            <div class="row form-icon-container align-items-center expand-on-hover">
-                                <div class="col-4 form-icon-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="col-8 form-icon-label center-block">
-                                    <div class="form-icon-label-content">
-                                        San Diego, California
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <form method="POST" action="https://formspree.io/dev.michael.jones@gmail.com">
+                                    <div class="form-group">
+                                        <input name="Name" class="form-control" id="input-name" placeholder="Name">
+    
                                     </div>
-
+                                    <div class="form-group">
+                                        <input type="email" name="Email" class="form-control" id="input-email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="Message" class="form-control" id="input-message" rows="10" placeholder="A brief description of your project..."></textarea>
+                                    </div>
+                                    <div class="submit-button-container">
+                                        <button type="submit" class="btn submit-button">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+    
+                            <div class="col-md-6" style="padding-top: 50px;">
+                                <!--Location-->
+                                <div class="row form-icon-container align-items-center expand-on-hover">
+                                    <div class="col-4 form-icon-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-8 form-icon-label center-block">
+                                        <div class="form-icon-label-content">
+                                            San Diego, California
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <!--Phone Number-->
+                                <div class="row form-icon-container align-items-center expand-on-hover">
+                                    <div class="col-4 form-icon-item">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="col-8 form-icon-label center-block">
+                                        <div class="form-icon-label-content">
+                                            <a href="tel: 1-757-582-2744">1-757-582-2744</a>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <!--Email-->
+                                <div class="row form-icon-container align-items-center expand-on-hover">
+                                    <div class="col-4 form-icon-item">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="col-8 form-icon-label center-block">
+                                        <div class="form-icon-label-content">
+                                            Dev.Michael.Jones@gmail.com
+                                        </div>
+    
+                                    </div>
                                 </div>
                             </div>
-                            <!--Phone Number-->
-                            <div class="row form-icon-container align-items-center expand-on-hover">
-                                <div class="col-4 form-icon-item">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="col-8 form-icon-label center-block">
-                                    <div class="form-icon-label-content">
-                                        <a href="tel: 1-757-582-2744">1-757-582-2744</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--Email-->
-                            <div class="row form-icon-container align-items-center expand-on-hover">
-                                <div class="col-4 form-icon-item">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="col-8 form-icon-label center-block">
-                                    <div class="form-icon-label-content">
-                                        Dev.Michael.Jones@gmail.com
-                                    </div>
-
-                                </div>
-                            </div>
+    
                         </div>
-
+    
                     </div>
-
                 </div>
             </div>
+            
 
 
 
