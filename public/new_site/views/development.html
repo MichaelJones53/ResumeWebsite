@@ -101,7 +101,7 @@
             z-index: -1;
         }
 
-        .bg-image-overlay{
+        .bg-image-overlay {
             width: 100vw;
             height: 100vh;
             position: fixed;
@@ -122,14 +122,15 @@
             background-position: center;
             overflow: hidden;
             transition: 2s ease-in-out;
-            
+
         }
-        .top-section.first{
+
+        .top-section.first {
             background-image: url(../images/beach_boat_image.jpg);
             transition: 0s;
         }
 
-        .top-section.next{
+        .top-section.next {
             background-image: url(../images/skills_image.jpeg);
             transition: 0s;
         }
@@ -153,7 +154,7 @@
 
         .grow {
             transform: scale(1.05);
-            
+
         }
 
         .hide-element {
@@ -213,7 +214,7 @@
 
         .expand-on-hover {
             transition: .5s;
-            
+
         }
 
         .expand-on-hover:hover {
@@ -297,7 +298,7 @@
             text-align: center;
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.37);
+            background-color: rgba(0, 0, 0, 0.45);
             color: white;
             font-size: 6vw;
             padding-right: 10%;
@@ -332,9 +333,20 @@
             opacity: .3;
         }
 
+        .offscreen-project {
+            opacity: 0;
+            transition: 2s;
+        }
+
+        .onscreen-project {
+            opacity: 1;
+            transition: 2s;
+        }
+
         .onscreen-container {
             left: 0;
             opacity: 1;
+
         }
 
 
@@ -404,18 +416,21 @@
             padding-bottom: 20px;
         }
 
-        .row{
-            margin-left: 0px; 
+        .row {
+            margin-left: 0px;
             margin-right: 0px;
         }
-.icon-container {
+
+        .icon-container {
             padding: 30px 20px;
         }
-        
+
         .row-container {
+            background-color: white;
             padding: 0 30px;
         }
-        .fill-bg-section{
+
+        .fill-bg-section {
             background-color: rgb(241, 241, 241);
         }
 
@@ -423,7 +438,7 @@
             padding: 65px 30px;
             min-height: 90vh;
         }
-    
+
         .contact-tagline {
             font-size: 3vw;
             text-align: center;
@@ -440,7 +455,7 @@
             transition: .3s;
         }
 
-        
+
         .submit-button-container {
             text-align: center;
 
@@ -456,7 +471,6 @@
 
         .form-icon-container {
             color: white;
-            padding: 10px 0;
         }
 
         .form-icon-item {
@@ -476,55 +490,138 @@
             transition: .2s;
 
         }
-        .form-icon-label-content > a{
-            
-            color:white;
+
+        .form-icon-label-content>a {
+
+            color: white;
         }
 
-        .project-container{
-            height: 200px;
-            width: 33%;
+        .project-container {
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            width: 33.333%;
             color: white;
-            justify-content: left;
             background-color: transparent;
             overflow: hidden;
-            padding: 7px;
             position: relative;
-           
+            display: flex;
+            justify-content: center;
         }
 
-        .project-image-container{
+        .project-container:hover .background_reveal {
+            transform: scale(1);
+        }
+
+        .project-container:hover .project-header,
+        .project-container:hover .project-summary {
+            color: black;
+        }
+
+        .background_reveal:hover .project-summary {
+            color: black;
+        }
+
+        .background_reveal {
+            padding: 0;
+            transition: .5s;
             position: absolute;
-            z-index:0;
-            top:0;
-            right:0;
-            bottom:0;
-            left:0;
-            
-        }
-        
+            transform: scale(0);
+            display: flex;
+            align-content: center;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 105%;
+            height: 105%;
 
-        .project-header{
-            padding: 0px;
-            position: relative;
+        }
+
+        .projects-container {
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-header {
+            transition: 1s;
+            left: 15px;
+            top: 15px;
+            position: absolute;
             z-index: 1;
             font-size: 2vw;
-           
-            
-        }
-        
-        .project-summary{
-            position: absolute;
-            bottom:7px;
-            left: 7px;
-            right: 7px;
         }
 
-        
+        .project-summary {
+            transition: 1s;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+        }
+
+        .projects-button {
+            transition: .5s;
+            z-index: 1;
+            margin: auto;
+            width: 125px;
+            color: black;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .projects-button:hover {
+            background-color: rgb(0, 140, 255);
+            color: white;
+            border-color: white;
+        }
+
+
+        #project-modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        .project-modal-content {
+
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 0 ;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 70%;
+            height: 50%;
+        }
+        .contact_link:hover {
+            text-decoration: none;
+        }
+        .close {
+            color: #aaa;
+            position: relative;
+            padding:0;
+            float:right;
+            margin-top: -10px;
+            margin-right: 5px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
         @media (max-width: 767px) {
-            .project-container{
-                width: 50%;
+            .project-container {
+                width: 100%;
             }
 
             .top-section-inner {
@@ -563,15 +660,15 @@
                 font-size: 4vw;
             }
 
-           
-            .contact-tagline{
+
+            .contact-tagline {
                 font-size: 5.5vw;
             }
 
-            
+
         }
 
-        
+
 
 
         @keyframes bounce {
@@ -624,257 +721,182 @@
 
 
     <div class="spacer"></div>
-    
-        
-        <!--start page content-->
-        <div class="page-content">
 
+
+    <!--start page content-->
+    <div class="page-content">
+
+        <!-- The Modal -->
+        <div id="project-modal">
+
+                <!-- Modal content -->
+                <div class="project-modal-content">
+                <span class="close" onclick="closeProjectModal()">&times;</span>
+                <p>Some text in the Modal..</p>
+                </div>
             
+            </div>
 
-            <!--Values section-->
-            <div class="container-fluid fill-bg-section">
-                    <div class="group-header">
-                            Development Values
-                        </div>
-                <div class="row centered-content row-container">
-                    <div class="col-md icon-container">
-                        <div class="expand-on-hover">
-                            <img class="section2-icon" src="../images/responsive_image.png" alt="response design">
-                            <div class="icon-header">Responsive Design</div>
-                            <div class="icon-info">Products should look beautifully and function smoothly no matter what device is being
-                                used.</div>
-                        </div>
-                    </div>
-                    <div class="col-md icon-container">
-                        <div class="expand-on-hover">
-                            <img class="section2-icon" src="../images/design_image.png" alt="User Expereince image">
-                            <div class="icon-header">User Experience</div>
-                            <div class="icon-info">Users deserve the best experience to keep them coming back again and again.</div>
-                        </div>
-                    </div>
-                    <div class="col-md icon-container">
-                        <div class="expand-on-hover">
-                            <img class="section2-icon" src="../images/animation_image.png" alt="alterations image">
-                            <div class="icon-header">Animations</div>
-                            <div class="icon-info">Warm events and transitions are potent tools for engaging users effectively.</div>
+
+        <!--Values section-->
+        <div class="container-fluid fill-bg-section">
+            <div class="group-header">
+                Development Values
+            </div>
+            <div class="row centered-content row-container">
+                <div class="col-md icon-container">
+                    <div class="expand-on-hover">
+                        <img class="section2-icon" src="../images/responsive_image.png" alt="response design">
+                        <div class="icon-header">Responsive Design</div>
+                        <div class="icon-info">Products should look beautifully and function smoothly no matter what device
+                            is being used.
                         </div>
                     </div>
                 </div>
+                <div class="col-md icon-container">
+                    <div class="expand-on-hover">
+                        <img class="section2-icon" src="../images/design_image.png" alt="User Expereince image">
+                        <div class="icon-header">User Experience</div>
+                        <div class="icon-info">Users deserve the best experience to keep them coming back again and again.</div>
+                    </div>
+                </div>
+                <div class="col-md icon-container">
+                    <div class="expand-on-hover">
+                        <img class="section2-icon" src="../images/animation_image.png" alt="alterations image">
+                        <div class="icon-header">Animations</div>
+                        <div class="icon-info">Warm events and transitions are potent tools for engaging users effectively.</div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <!--Projects section-->
-            <div class="container-fluid">
-                <div class="group-header">
-                    Projects
-                </div>  
-
+        <!--Projects section-->
+        <div class="container-fluid">
+            <div class="group-header">
+                Projects
+            </div>
+            <!--Alexa Project-->
+            <div class="projects-container">
                 <div class="row">
-                <div class="project-container">
-                    <!--Begin with title here...-->
-                    <div class="project-header">
+                    <div class="project-container offscreen-project" style="background-image: url('../images/alexa_image.jpg')">
+                        <!--Begin with title here...-->
+                        <div class="background_reveal">
+                            <div class="btn projects-button" onclick="showProjectModal('Alexa')">Details</div>
+                        </div>
+                        <div class="project-header">
                             Alexa Project
-                            </div>
-                    <div class="project-image-container expand-on-hover" style="background-image: url('../images/fireworks_image.jpg')">
-                        
+                        </div>
+                        <div class="overlay"></div>
+
+                        <div class="project-summary">Leveraging Alexa to sell products and services</div>
                     </div>
 
-                    <div class="project-summary">this is the project summary.  it is sort of long but not too long</div>
-                </div> 
+                    <!--Next Project-->
+                    <div class="project-container offscreen-project" style="background-image: url('../images/alexa_image.jpg')">
+                        <!--Begin with title here...-->
+                        <div class="background_reveal">
+                            <div class="btn projects-button">Details</div>
+                        </div>
+                        <div class="project-header">
+                            Alexa Project
+                        </div>
+                        <div class="overlay"></div>
 
+                        <div class="project-summary">Leveraging Alexa to sell products and services</div>
+                    </div>
 
+                    <div class="project-container offscreen-project" style="background-image: url('../images/alexa_image.jpg')">
+                        <!--Begin with title here...-->
+                        <div class="background_reveal">
+                            <div class="btn projects-button">Details</div>
+                        </div>
+                        <div class="project-header">
+                            Alexa Project
+                        </div>
+                        <div class="overlay"></div>
 
-                <div class="project-container">
-                    <!--Begin with title here...-->
-                    <h2>This is the title</h2>
+                        <div class="project-summary">Leveraging Alexa to sell products and services</div>
+                    </div>
 
+                    <div class="project-container offscreen-project" style="background-image: url('../images/alexa_image.jpg')">
+                        <!--Begin with title here...-->
+                        <div class="background_reveal">
+                            <div class="btn projects-button">Details</div>
+                        </div>
+                        <div class="project-header">
+                            Alexa Project
+                        </div>
+                        <div class="overlay"></div>
 
-                </div>
-                <div class="project-container">
-                    <!--Begin with title here...-->
-                    <h2>This is the title</h2>
-
-
-                </div>
-                <div class="project-container">
-                    <!--Begin with title here...-->
-                    <h2>This is the title</h2>
-
-
-                </div>
-                <div class="project-container">
-                    <!--Begin with title here...-->
-                    <h2>This is the title</h2>
-
-
-                </div>
-
-
+                        <div class="project-summary">Leveraging Alexa to sell products and services</div>
+                    </div>
 
                 </div>
 
             </div>
 
-            <!--Process section-->
-            <div class="container-fluid fill-bg-section">
-                    <div class="group-header">
-                            My Process
-                        </div>
-                <!--Planning row-->
-                <div class="row centered-content">
-                    <div class="col-md-6 no-row-padding">
-                        <div class="process-image-wrapper offscreen-container">
+        </div>
 
-                            <div class="polygon-container" id="planning-image-container">
-                                <div class="process-image-container">
-                                    <div class="overlay">
-                                        Planning
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="shadow"></div>
-                        </div>
+        <!--Process section-->
+        <div class="container-fluid fill-bg-section">
+            <div class="group-header">
+                My Process
+            </div>
+            <!--Planning row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+                    <div class="process-image-wrapper offscreen-container">
 
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <div class="process-info-container icon-container">
-                            <div class="expand-on-hover">
-                                <div class="process-info-img-container">
-
-                                    <img class="section2-icon" src="../images/plan_icon.png" alt="planning image">
-
-                                </div>
-                                <div class="process-info">
-                                    Gathering a clear understanding of a products purpose, the goals to achieve, and the target audience.
+                        <div class="polygon-container" id="planning-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Planning
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-
-                </div>
-
-                <!--Designing row-->
-                <div class="row centered-content">
-                    <div class="col-md-6 no-row-padding">
-
-
-                        <div class="process-image-wrapper offscreen-container">
-                            <div class="polygon-container" id="designing-image-container">
-                                <div class="process-image-container">
-                                    <div class="overlay">
-                                        Designing
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="shadow"></div>
-                        </div>
-
-
-
-
-
-
-                    </div>
-
-
-
-
-                    <div class="col-md-6">
-
-                        <div class="process-info-container icon-container">
-                            <div class="expand-on-hover">
-                                <div class="process-info-img-container">
-
-                                    <img class="section2-icon" src="../images/design_icon.png" alt="planning image">
-
-                                </div>
-                                <div class="process-info">
-                                    The product takes shape.  Layouts and mock-ups created and evaluated.  Repeated until satisified.
-                                </div>
-                            </div>
-                        </div>
+                        <div class="shadow"></div>
                     </div>
 
                 </div>
 
-                <!--Development row-->
-                <div class="row centered-content">
-                    <div class="col-md-6 no-row-padding">
 
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
 
-                        <div class="process-image-wrapper offscreen-container">
-                            <div class="polygon-container" id="developing-image-container">
-                                <div class="process-image-container">
-                                    <div class="overlay">
-                                        Developing
-                                    </div>
-                                </div>
+                                <img class="section2-icon" src="../images/plan_icon.png" alt="planning image">
+
                             </div>
-                            <div class="shadow"></div>
-                        </div>
-
-
-
-
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <div class="process-info-container icon-container">
-                            <div class="expand-on-hover">
-                                <div class="process-info-img-container">
-
-                                    <img class="section2-icon" src="../images/coding_icon.png" alt="planning image">
-
-                                </div>
-                                <div class="process-info">
-                                    Building the product to the specfications.  Coding, coding, and more coding.
-                                </div>
+                            <div class="process-info">
+                                Gathering a clear understanding of a products purpose, the goals to achieve, and the target audience.
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
-                <!--Deployment row-->
-                <div class="row centered-content">
-                    <div class="col-md-6 no-row-padding">
+
+            </div>
+
+            <!--Designing row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
 
 
-                        <div class="process-image-wrapper offscreen-container">
-                            <div class="polygon-container" id="releasing-image-container">
-                                <div class="process-image-container">
-                                    <div class="overlay">
-                                        Releasing
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="shadow"></div>
-                        </div>
-
-
-
-
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <div class="process-info-container icon-container">
-                            <div class="expand-on-hover">
-                                <div class="process-info-img-container">
-
-                                    <img class="section2-icon" src="../images/deploy_icon.png" alt="planning image">
-
-                                </div>
-                                <div class="process-info">
-                                    Sending the product out into the world! Fly program, fly!
+                    <div class="process-image-wrapper offscreen-container">
+                        <div class="polygon-container" id="designing-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Designing
                                 </div>
                             </div>
                         </div>
+                        <div class="shadow"></div>
                     </div>
+
+
+
+
 
 
                 </div>
@@ -882,68 +904,172 @@
 
 
 
+                <div class="col-md-6">
+
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/design_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                The product takes shape. Layouts and mock-ups created and evaluated. Repeated until satisified.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Development row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+
+
+                    <div class="process-image-wrapper offscreen-container">
+                        <div class="polygon-container" id="developing-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Developing
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/coding_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                Building the product to the specfications. Coding, coding, and more coding.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--Deployment row-->
+            <div class="row centered-content">
+                <div class="col-md-6 no-row-padding">
+
+
+                    <div class="process-image-wrapper offscreen-container">
+                        <div class="polygon-container" id="releasing-image-container">
+                            <div class="process-image-container">
+                                <div class="overlay">
+                                    Releasing
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="process-info-container icon-container">
+                        <div class="expand-on-hover">
+                            <div class="process-info-img-container">
+
+                                <img class="section2-icon" src="../images/deploy_icon.png" alt="planning image">
+
+                            </div>
+                            <div class="process-info">
+                                Sending the product out into the world! Fly program, fly!
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
 
 
 
-            <!--Contact section-->
-            <div class="container-fluid fill-bg-section" style="background-color: transparent">
-                <div class="group-header">
-                    Contact
-                </div>
-                <div class="contact-content">
-                    <div class="container-fluid">
-                        <div class="contact-tagline">
-                            I'd
-                            <i class="far fa-heart"></i> to help you with your next project!
+
+
+
+        </div>
+
+
+
+        <!--Contact section-->
+        <div class="container-fluid fill-bg-section" style="background-color: transparent">
+            <div class="group-header">
+                Contact
+            </div>
+            <div class="contact-content">
+                <div class="container-fluid">
+                    <div class="contact-tagline">
+                        I'd
+                        <i class="far fa-heart"></i> to help you with your next project!
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <form method="POST" action="https://formspree.io/dev.michael.jones@gmail.com">
+                                <div class="form-group">
+                                    <input name="Name" class="form-control" id="input-name" placeholder="Name">
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="Email" class="form-control" id="input-email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="Message" class="form-control" id="input-message" rows="10" placeholder="A brief description of your project..."></textarea>
+                                </div>
+                                <div class="submit-button-container" style="margin-bottom:50px;">
+                                    <button type="submit" class="btn submit-button">Submit</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <form method="POST" action="https://formspree.io/dev.michael.jones@gmail.com">
-                                    <div class="form-group">
-                                        <input name="Name" class="form-control" id="input-name" placeholder="Name">
-    
+
+                        <div class="col-md-6">
+                            <!--Location-->
+                            <div class="row form-icon-container align-items-center expand-on-hover">
+                                <div class="col-4 form-icon-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="col-8 form-icon-label center-block">
+                                    <div class="form-icon-label-content">
+                                        San Diego, California
                                     </div>
-                                    <div class="form-group">
-                                        <input type="email" name="Email" class="form-control" id="input-email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="Message" class="form-control" id="input-message" rows="10" placeholder="A brief description of your project..."></textarea>
-                                    </div>
-                                    <div class="submit-button-container">
-                                        <button type="submit" class="btn submit-button">Submit</button>
-                                    </div>
-                                </form>
+
+                                </div>
                             </div>
-    
-                            <div class="col-md-6" style="padding-top: 50px;">
-                                <!--Location-->
+                            <!--Phone Number-->
+                            <a class="contact_link" href="tel: 1-757-582-2744">
                                 <div class="row form-icon-container align-items-center expand-on-hover">
-                                    <div class="col-4 form-icon-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="col-8 form-icon-label center-block">
-                                        <div class="form-icon-label-content">
-                                            San Diego, California
-                                        </div>
-    
-                                    </div>
-                                </div>
-                                <!--Phone Number-->
-                                <div class="row form-icon-container align-items-center grow-on-hover">
                                     <div class="col-4 form-icon-item">
                                         <i class="fas fa-phone"></i>
                                     </div>
                                     <div class="col-8 form-icon-label center-block">
                                         <div class="form-icon-label-content">
-                                            <a href="tel: 1-757-582-2744">1-757-582-2744</a>
+                                            1-757-582-2744
                                         </div>
-    
+
                                     </div>
                                 </div>
-                                <!--Email-->
+                            </a>
+                            <!--Email-->
+                            <a class="contact_link" href="mailto:Dev.Michael.Jones@gmail.com">
                                 <div class="row form-icon-container align-items-center expand-on-hover">
                                     <div class="col-4 form-icon-item">
                                         <i class="fas fa-envelope"></i>
@@ -952,30 +1078,64 @@
                                         <div class="form-icon-label-content">
                                             Dev.Michael.Jones@gmail.com
                                         </div>
-    
+
                                     </div>
                                 </div>
-                            </div>
-    
+                            </a>
+
+                            <!--LinkedIn-->
+                            <a class="contact_link" href="https://www.linkedin.com/in/michael-adam-jones" target=”_blank”>
+                                <div class="row form-icon-container align-items-center expand-on-hover">
+                                    <div class="col-4 form-icon-item">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                    <div class="col-8 form-icon-label center-block">
+                                        <div class="form-icon-label-content">
+                                            LinkedIn
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+
+
+
+                            <!--Resume-->
+                            <a class="contact_link" href="https://docs.google.com/document/d/1dFCBJ-eDffJ8Dm6e45v0HUpDaWlGyQC2Wc2VIvxoEDo/edit?usp=sharing"
+                                target=”_blank”>
+                                <div class="row form-icon-container align-items-center expand-on-hover">
+                                    <div class="col-4 form-icon-item">
+                                        <i class="fas fa-file-archive"></i>
+                                    </div>
+                                    <div class="col-8 form-icon-label center-block">
+                                        <div class="form-icon-label-content">
+                                            Resume
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-    
+
                     </div>
+
                 </div>
             </div>
-            
-
-
-
         </div>
 
 
 
 
+    </div>
 
 
 
 
-    
+
+
+
+
+
     <!--end page content-->
 
 
@@ -1011,11 +1171,19 @@
             reset: false,
             duration: 2000
         });
+        
 
+
+        var projectModal = document.getElementById('project-modal')
 
         $(document).ready(function () {
-
-
+            window.onclick = function(event) {
+            if (event.target == projectModal) {
+                closeProjectModal();
+            }
+        }
+        
+        
 
             $(window).scroll(function () {
                 // checks if window is scrolled more than 500px, adds/removes solid class
@@ -1049,6 +1217,14 @@
                     }
                 });
 
+                $('.project-container').each(function () {
+                    var elem = $(this);
+                    var elemOffset = elem.offset();
+                    if (elemOffset.top < (scrollBottom - 100) && elem.hasClass('offscreen-project')) {
+                        elem.removeClass('offscreen-project');
+                        elem.addClass('onscreen-project');
+                    }
+                });
 
 
 
@@ -1062,6 +1238,13 @@
 
         });
 
+        function showProjectModal(projectName) {
+            projectModal.style.display = "block";
+        }
+
+        function closeProjectModal(){
+            projectModal.style.display = "none";
+        }
 
         function isInView(e) {
             var elemOffset = e.offset();
