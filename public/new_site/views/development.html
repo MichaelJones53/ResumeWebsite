@@ -120,9 +120,11 @@
                     </div>
 
                 </div>
-                <div class="row project-modal-section-header">
+                <div class="row tools_header_section">
                     <div class="col">
-                        Tools: <span id="tools_span"></span>
+                        
+                            <h4 style="margin: 0">Tools</h4> 
+                            <span id="tools_span"></span>
                     </div>
                 </div>
                 
@@ -181,27 +183,28 @@
             <div class="group-header">
                 Projects
             </div>
-            <!--Alexa Project-->
+            
             <div class="projects-container">
                 <div class="row centered-row">
+                    <!--Insurance Quoter Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/alexa_image.jpg')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('Alexa')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('Insurance Quoter')">Learn More</div>
                         </div>
                         <div class="project-header">
-                            Alexa Project
+                            Insurance Quoter
                         </div>
                         <div class="overlay"></div>
 
-                        <div class="project-summary">Leveraging Amazon's Alexa to sell products and services and reach new market niches</div>
+                        <div class="project-summary">Leveraging Amazon's Alexa to generate high value leads</div>
                     </div>
 
-                    <!--Next Project-->
+                    <!--API Testing Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/api_testing_image.png')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('API Testing')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('API Testing')">Learn More</div>
                         </div>
                         <div class="project-header">
                             API Testing
@@ -210,11 +213,11 @@
                         
                         <div class="project-summary">Building confidence and stability by means of torough and integraded testing</div>
                     </div>
-
+                    <!--Xscribe Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/xscribe_image.png')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('Xscribe')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('Xscribe')">Learn More</div>
                         </div>
                         <div class="project-header">
                             Xscribe
@@ -223,24 +226,24 @@
                         
                         <div class="project-summary">Transcribing audio for call-center based analysis</div>
                     </div>
-
+                    <!--CSUSM Placement Assessment Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/csusm_image.jpg')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('CSUSM Placement Assessment')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('CSUSM Placement Assessment')">Learn More</div>
                         </div>
                         <div class="project-header">
-                            CSUSM Placement Assessment Tool
+                            CSUSM Placement Tool
                         </div>
                         <div class="overlay"></div>
 
-                        <div class="project-summary">Enhancing the placement process of students and insntitutions</div>
+                        <div class="project-summary">Enhancing the placement process for students and insititutions</div>
                     </div>
-
+                    <!--Next Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/portfolio_image.jpg')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('Portfolio Website')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('Portfolio Website')">Learn More</div>
                         </div>
                         <div class="project-header">
                             Portfolio Website
@@ -250,11 +253,11 @@
                         <div class="project-summary">Displaying my skills and accomplishments in a fun and digestable environment</div>
                     </div>
                     
-
+                    <!--Next Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/kenroko_image.jpg')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('Kenroko VRC app')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('Kenroko VRC app')">Learn More</div>
                         </div>
                         <div class="project-header">
                             Kenroko VRC (iOS app)
@@ -263,10 +266,11 @@
 
                         <div class="project-summary">Cultivating a running community for a cause</div>
                     </div>
+                    <!--Next Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/loteria_image.jpg')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('Loteria app')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('Loteria app')">Learn More</div>
                         </div>
                         <div class="project-header">
                             ¡Loteria! (Android app)
@@ -275,10 +279,11 @@
 
                         <div class="project-summary">Automating card game process to better the gameplay experience</div>
                     </div>
+                    <!--Next Project-->
                     <div class="project-container offscreen-project" style="background-image: url('../images/karaoke_image.jpg')">
                         <!--Begin with title here...-->
                         <div class="background_reveal">
-                            <div class="btn projects-button" onclick="showProjectModal('My Karaoke List app')">Details</div>
+                            <div class="btn projects-button" onclick="showProjectModal('My Karaoke List app')">Learn More</div>
                         </div>
                         <div class="project-header">
                             My Karaoke List (Android app)
@@ -691,8 +696,8 @@
             $('body').addClass('no-overflow');
         
             switch(projectName){
-                case "Alexa":
-                $('#modal_title').text("Alexa Skill");
+                case "Insurance Quoter":
+                $('#modal_title').text("Insurance Quoter");
                     $('.carousel-inner').append(
                                 "<div class='carousel-item active'>"+
                                    "<img class='project-image' src='../images/repairs_image.png' alt='First slide'>"+
@@ -703,10 +708,10 @@
                     $('.carousel-inner').append("<div class='carousel-item'>"+
                                     "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
                                 "</div>");
-
+                                $('#modal_title').text("Insurance Quoter");
                                 $('#tools_span').text(".NET/C#, Alexa Developers Console, AWS");
-                                $('#description_span').text("This Amazon Alexa app was a tool developed for AIG Direct.  It would allow users to ");
-                                $('#value_span').text("");
+                                $('#description_span').text("This Amazon Alexa app was a tool developed for AIG Direct. It would allow users to request an insurance quote through their Alexa, thus alleviating the need for agent support.  The user would quickly answer a few qualifying questions and be provided with a quote and, if desired, be contacted by an agent to continue the process.  The agent would be provided with the qualifying information, thus enhancing the user experience and saving valuable time.");
+                                $('#value_span').text("This was developed as a proof of concept and received tremendous support internally.  The potential for no cost, high value lead generation is a unicorn of an opportunity.  I personally learned an enormous amount developing this tool, from how Alexa functions, to managing dialogs and leveraging AWS lambdas.");
                     break;
                 case "API Testing":
                 $('.carousel-inner').append(
@@ -719,21 +724,106 @@
                 $('.carousel-inner').append("<div class='carousel-item'>"+
                                 "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
                             "</div>");
-                            $('#tools_span').text("");
-                                $('#description_span').text("");
-                                $('#value_span').text("");
+                            $('#modal_title').text("API Testing");
+                            $('#tools_span').text("Postman, .Net/C#, Visual Studio, Moq");
+                                $('#description_span').text("I wrote hundreds of Postman API test scripts, C# unit tests, and integration tests to identify discrepancies, shore up the codebase, and overall raise confidence for both API users and internal managers.  With Postman, one can execute tests with automated validation, allowing for the execution of hundreds of endpoint and schema validations in minutes.  This will permit you to feel confident your API users are receiving the responses they’re supposed to and accurately.  Unit and integration tests allow for a granular assessment of the codebase itself.  These tests are essential to troubleshooting and catching propagated errors from seemingly small or insignificant changes.");
+                                $('#value_span').text("The API is used by 3rd party providers and its functionality, accuracy, and reliability are paramount.  Through comprehensive, integrated, and automated testing, a business gains an extremely valuable mindset towards its software product: confidence.  Personally, the value gained by writing and executing such an exhaustive test-set is unbridaled. It taught me the value of writing code with a test-oriented mindset, the value of dependency injection, the unnecessary burdens that are created with code isn’t written in a testable manner, and how to resolve them.");
                 break;
                 case 'Xscribe':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("Xscribe");
+                            $('#tools_span').text(".NET/C#, Python, IBM Watson, Google Speech-To-Text, Sentiment Analysis");
+                                $('#description_span').text("This is a tool developed to transcribe a multi-participant audio file to text for call-center oriented evaluation and perform sentiment analysis.  It was a proof of concept with the main objective of identifying with transcription provided the best results: Google’s Speech-To-Text ML service, or IBM’s Watson ML transcription service.");
+                                $('#value_span').text("The business has an amazing opportunity with this product.  With the transcription, Machine Learning algorithms can be applied to analyze what qualities lead to a sale, as well as instant feedback to prompt agents with real-time analysis of the client sentiment for higher quality engagement.  Additionally, calls can be evaluated in mass for quality control and assessment.  I personally gained a lot of value by leveraging cutting edge technologies to help propel other non-technical departments into a more data-aligned, feedback-driven direction.");
                 break;
                 case 'CSUSM Placement Assessment':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("CSUSM Placement Assessment Tool");
+                            $('#tools_span').text("HTML, CSS, Javascript, Bootstrap, JQuery");
+                            $('#description_span').text("This is a tool to assist High School counselors and transferring students to identify college level placement for Math.  It considers marks in GPA, SAT, ACT, and course level completion to identify or project the Math course(s) the student will need to start with upon entering college.  ");
+                            $('#value_span').text("The college level placement guidelines are convoluted and cumbersome to navigate, especially for a high school student, but this tool sought to change that.  It provides an easy to use UI with a minimalist feel to really drive home how simple this process should be.  After I presented this product to the board, there was enormous desire for more, similar tools for some of their more daunting processes.");
                 break;
                 case 'Portfolio Website':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("");
+                            $('#tools_span').text("");
+                            $('#description_span').text("");
+                            $('#value_span').text("");
                 break;
                 case 'Kenroko VRC app':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("");
+                            $('#tools_span').text("");
+                            $('#description_span').text("");
+                            $('#value_span').text("");
                 break;
                 case 'Loteria app':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("");
+                            $('#tools_span').text("");
+                            $('#description_span').text("");
+                            $('#value_span').text("");
                 break;
                 case 'My Karaoke List app':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("Portfolio Website");
+                            $('#tools_span').text("HTML, CSS, Javascript, Bootstrap, JQuery, Google Analytics");
+                            $('#description_span').text("That is this website!  Its function is to provide a medium for me to display some of my skills. It outlines my software development philosophy and leans heavily into animations and transitions for a soothing and enjoyable experience.  It is also a means for those interested in reaching out to me to do so easily and seamlessly.");
+                            $('#value_span').text("Creating this site has been very valuable to me.  It game me an opportunity to really lean into animations and also a place to keep track of my projects and ventures.  As a software developer, it is extremely important to maintain a positive and warm web presence.");
                 break;
                 default:
                     break;
