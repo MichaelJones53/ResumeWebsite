@@ -2,10 +2,11 @@
         
         body {
             font-family: 'Josefin Sans', sans-serif;
-            
+            position: relative;
             width: 100vw;
             display: none;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         
         

@@ -49,9 +49,9 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-tool">
     <!--navbar-->
-    <nav class="navbar nav-transparent navbar-expand-md navbar-light position-fixed">
+    <nav id="navbar-tool" class="navbar nav-transparent navbar-expand-md navbar-light position-fixed">
         <a class="navbar-brand" href="../index.html">
             <img src="../images/wave_logo.png" id="nav-logo-image" alt="">
         </a>
@@ -61,11 +61,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="./development.html">Development
-                    <span class="sr-only">(current)</span>
-                </a>
-                <!--<a class="nav-item nav-link" href="./skills.html">Skills</a>-->
-                <a class="nav-item nav-link" href="./contact.html">Contact</a>
+                <a class="nav-item nav-link" href="#values_section">Values<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#projects_section">Projects</a>
+                <a class="nav-item nav-link" href="#process_section">Process</a>
+                <a class="nav-item nav-link" href="#contact_section">Contact</a>
             </div>
         </div>
     </nav>
@@ -147,7 +146,7 @@
 
 
         <!--Values section-->
-        <div class="container-fluid fill-bg-section">
+        <div id="values_section" class="container-fluid fill-bg-section">
             <div class="group-header">
                 Development Values
             </div>
@@ -179,7 +178,7 @@
         </div>
 
         <!--Projects section-->
-        <div class="container-fluid">
+        <div id="projects_section" class="container-fluid">
             <div class="group-header">
                 Projects
             </div>
@@ -299,7 +298,7 @@
         </div>
 
         <!--Process section-->
-        <div class="container-fluid fill-bg-section">
+        <div id="process_section" class="container-fluid fill-bg-section">
             <div class="group-header">
                 My Process
             </div>
@@ -463,7 +462,7 @@
 
 
         <!--Contact section-->
-        <div class="container-fluid" style="background-color: transparent">
+        <div id="contact_section" data-offset="500px" class="container-fluid" style="background-color: transparent">
             <div class="group-header">
                 Contact
             </div>
@@ -634,7 +633,14 @@
                 }
             }
 
-
+            $('.navbar-nav a').click(function(event) {
+                event.preventDefault();
+                var top = $($(this).attr('href'))[0].offsetTop - 30;
+                $("html, body").animate({ scrollTop: top + "px" }, 1000, 'swing');
+                
+                
+            });
+            
 
             $(window).scroll(function () {
                 // checks if window is scrolled more than 500px, adds/removes solid class
@@ -700,13 +706,13 @@
                 $('#modal_title').text("Insurance Quoter");
                     $('.carousel-inner').append(
                                 "<div class='carousel-item active'>"+
-                                   "<img class='project-image' src='../images/repairs_image.png' alt='First slide'>"+
+                                   "<img class='project-image' src='../images/alexa_1.png' alt='First slide'>"+
                                 "</div>");
                     $('.carousel-inner').append("<div class='carousel-item'>"+
-                                    "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                                    "<img class='project-image' src='../images/aig_1.jpg' alt='Second slide'>"+
                                 "</div>");
                     $('.carousel-inner').append("<div class='carousel-item'>"+
-                                    "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                                    "<img class='project-image' src='../images/insurance_1.jpg' alt='Third slide'>"+
                                 "</div>");
                                 $('#modal_title').text("Insurance Quoter");
                                 $('#tools_span').text(".NET/C#, Alexa Developers Console, AWS");
@@ -716,13 +722,13 @@
                 case "API Testing":
                 $('.carousel-inner').append(
                             "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                                "<img class='project-image' src='../images/testing_1.png' alt='First slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                                "<img class='project-image' src='../images/postman.png' alt='Second slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                                "<img class='project-image' src='../images/api_1.png' alt='Third slide'>"+
                             "</div>");
                             $('#modal_title').text("API Testing");
                             $('#tools_span').text("Postman, .Net/C#, Visual Studio, Moq");
@@ -732,13 +738,13 @@
                 case 'Xscribe':
                 $('.carousel-inner').append(
                             "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                                "<img class='project-image' src='../images/tts_1.png' alt='First slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                                "<img class='project-image' src='../images/google_1.png' alt='Second slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                                "<img class='project-image' src='../images/watson_1.png' alt='Third slide'>"+
                             "</div>");
                             $('#modal_title').text("Xscribe");
                             $('#tools_span').text(".NET/C#, Python, IBM Watson, Google Speech-To-Text, Sentiment Analysis");
@@ -748,13 +754,13 @@
                 case 'CSUSM Placement Assessment':
                 $('.carousel-inner').append(
                             "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                                "<img class='project-image' src='../images/placement_1.jpg' alt='First slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                                "<img class='project-image' src='../images/csusm_1.jpg' alt='Second slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                                "<img class='project-image' src='../images/placement_1.png' alt='Third slide'>"+
                             "</div>");
                             $('#modal_title').text("CSUSM Placement Assessment Tool");
                             $('#tools_span').text("HTML, CSS, Javascript, Bootstrap, JQuery");
@@ -764,66 +770,66 @@
                 case 'Portfolio Website':
                 $('.carousel-inner').append(
                             "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
+                                "<img class='project-image' src='../images/project_1.jpg' alt='First slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
+                                "<img class='project-image' src='../images/project_2.jpg' alt='Second slide'>"+
                             "</div>");
                 $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
-                            "</div>");
-                            $('#modal_title').text("");
-                            $('#tools_span').text("");
-                            $('#description_span').text("");
-                            $('#value_span').text("");
-                break;
-                case 'Kenroko VRC app':
-                $('.carousel-inner').append(
-                            "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
-                            "</div>");
-                $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
-                            "</div>");
-                $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
-                            "</div>");
-                            $('#modal_title').text("");
-                            $('#tools_span').text("");
-                            $('#description_span').text("");
-                            $('#value_span').text("");
-                break;
-                case 'Loteria app':
-                $('.carousel-inner').append(
-                            "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
-                            "</div>");
-                $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
-                            "</div>");
-                $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
-                            "</div>");
-                            $('#modal_title').text("");
-                            $('#tools_span').text("");
-                            $('#description_span').text("");
-                            $('#value_span').text("");
-                break;
-                case 'My Karaoke List app':
-                $('.carousel-inner').append(
-                            "<div class='carousel-item active'>"+
-                                "<img class='project-image' src='../images/honey.jpg' alt='First slide'>"+
-                            "</div>");
-                $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/me_in_paris.jpg' alt='Second slide'>"+
-                            "</div>");
-                $('.carousel-inner').append("<div class='carousel-item'>"+
-                                "<img class='project-image' src='../images/login_screen_image.png' alt='Third slide'>"+
+                                "<img class='project-image' src='../images/project_3.jpg' alt='Third slide'>"+
                             "</div>");
                             $('#modal_title').text("Portfolio Website");
                             $('#tools_span').text("HTML, CSS, Javascript, Bootstrap, JQuery, Google Analytics");
                             $('#description_span').text("That is this website!  Its function is to provide a medium for me to display some of my skills. It outlines my software development philosophy and leans heavily into animations and transitions for a soothing and enjoyable experience.  It is also a means for those interested in reaching out to me to do so easily and seamlessly.");
                             $('#value_span').text("Creating this site has been very valuable to me.  It game me an opportunity to really lean into animations and also a place to keep track of my projects and ventures.  As a software developer, it is extremely important to maintain a positive and warm web presence.");
+                break;
+                case 'Kenroko VRC app':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/kenroko_1.jpeg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/kenroko_2.jpeg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/kenroko_3.jpeg' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("Kenroko VRC App");
+                            $('#tools_span').text("Swift, Xcode, ReSTful API integration, Firebase");
+                            $('#description_span').text("This was an app to support a virtual running club, whose proceeds benefit the Cancer Institute Hospital of the Japanese Foundation for Cancer Research.  The app is in development with the goal of linking runners together and provided a platform for event time submissions and to provide the organizer with a means of easily and instantly communicating with the registered or potential participants. ");
+                            $('#value_span').text("I learned a great deal while developing this app.  My first large scale mobile applications with the potential to have thousands of users, messaging, and financial transaction handling.  It has proven to be a very rewarding challenge and will be an amazing product once completed.");
+                break;
+                case 'Loteria app':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/loteria_1.jpg' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/loteria_2.jpg' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/loteria_3.jpg' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("Loteria App");
+                            $('#tools_span').text("Java, XML, Android Studio, PhotoShop, Text-To-Speech");
+                            $('#description_span').text("This was a utility app designed to shuffle and read the cards for the popular game “Loteria”.  It maintained the deck of 54 cards with images and spoke the card name.  I also implemented a timer to control how quickly cards would be read.");
+                            $('#value_span').text("This was my first Android app and where I first embarked into software development.  I had a great deal of fun designing and developing this product.  I learned so much about Java, the Android Runtime, data structures, and a slew of other concepts that were way over my head at the time.  Completing this fill me with a sense of pride and accomplishment that I still cherish to this day. ");
+                break;
+                case 'My Karaoke List app':
+                $('.carousel-inner').append(
+                            "<div class='carousel-item active'>"+
+                                "<img class='project-image' src='../images/login_screen_image.png' alt='First slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/list_with_buttons_image.png' alt='Second slide'>"+
+                            "</div>");
+                $('.carousel-inner').append("<div class='carousel-item'>"+
+                                "<img class='project-image' src='../images/lyrics_image.png' alt='Third slide'>"+
+                            "</div>");
+                            $('#modal_title').text("My Karaoke List App");
+                            $('#tools_span').text("Java, XML, Android Studio, Web Scraping, API Integrations, Firebase");
+                            $('#description_span').text("This was an Android app that would maintain a users karaoke song list, perform audio fingerprinting to identifying and store a song playing in the environment, and provide the user with the lyrics for their songbase.  It provided persistent on device and account-based cloud storage so a user could easily switch devices and maintain their data.");
+                            $('#value_span').text("Working with user authentication, database storage, audio fingerprinting, and web scraping were all new and exciting horizons for me.  I gained a solid understanding of asynchronous processing for Java/Android and gained insight into ReSTful concepts and principles.  Building this app showed me just how far I’d come and reminded me that there is so much farther to go in the world of software development. ");
                 break;
                 default:
                     break;
