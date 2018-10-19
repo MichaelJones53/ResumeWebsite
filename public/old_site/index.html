@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115095001-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115095001-1');
+</script>
+
+
+	<title>Michael Jones</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--Google Font-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+	 crossorigin="anonymous">
+	<style>
+		body {
+			font-family: 'Roboto Slab', serif;
+		}
+		#intro {
+			padding-left: 20px;
+			vertical-align: middle;
+		}
+		.dark-color {
+			display: none;
+			background-color: #424140;
+			color: #FFFFFF;
+		}
+		.light-color {
+			display: none;
+			color: #424140;
+			margin-left: 5px;
+			margin-right: 5px;
+			padding-top: 60px;
+		}
+		.header-top-margin {
+			text-decoration: underline;
+			margin: 0px;
+			margin-bottom: 30px;
+		}
+		.projects-header {
+			font-style: italic;
+		}
+		a {
+			color: white;
+		}
+		.info-field {
+			margin: 0px;
+		}
+		#jumbo-bar {
+			display: none;
+			background-color: white;
+			height: 3px;
+			margin-right: 15vw;
+		}
+		.jumbo {
+			background-color: #424140;
+			color: #FFFFFF;
+			padding-top: 16vw;
+			padding-bottom: 16vw;
+			margin-right: -30px;
+		}
+		#job-title {
+			font-size: 5vw;
+			display: none;
+		}
+		#dev-name {
+			font-size: 5vw;
+			display: none;
+		}
+		img {
+			object-fit: contain;
+		}
+		.test {
+			border-width: 2px;
+			border-style: solid;
+			border-color: blue;
+		}
+		.fill {
+			width: 100%;
+			height: 100%;
+			padding: 15px;
+			border-radius: 30px;
+			background-position: center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+		}
+		.rounded {
+			height: 150px;
+			width: 150px;
+			padding: 2px;
+			margin-bottom: 15px;
+			border-radius: 75px;
+			-webkit-border-radius: 75px;
+			-moz-border-radius: 75px;
+			border-style: solid;
+			border-width: 2px;
+			background-position: center;
+			border-color: #424140;
+		}
+		.grow{
+			transition: all .2s ease-in-out;
+		}
+		.grow:hover{
+			transform: scale(1.05);
+		}
+		.values-col {
+			padding-top: 20px;
+		}
+		.section_break {
+			background-color: #424140;
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		.text_title {
+			font-size: 1.1em;
+			font-weight: bold;
+			margin: 2px;
+		}
+		.text_company {
+			font-size: 1.3em;
+			font-weight: bold;
+			margin: 2px;
+		}
+		.text_description {
+			font-size: .9em;
+		}
+		.contact-icon {
+			line-height: 100px;
+			font-size: 5em;
+			color: #242424;
+			transition: font-size .2s ease-in-out;
+		}
+		.contact-icon:hover {
+			font-size: 6em;
+		}
+		.skills-div {
+			padding: 20px;
+		}
+		.contact-container {
+			text-align: center;
+			padding-bottom: 100px;
+		}
+		.projects-main-selector {
+			background-color: blue;
+		}
+		.project-content {
+			padding-left: 20px;
+		}
+		.panel-group {
+			display: none;
+			border-radius: 5px;
+			border-color: black;
+			border-width: 1px;
+		}
+		.panel {
+			border-style: solid;
+			border-color: black;
+			border-radius: 5px;
+			border-width: 1px;
+			padding-top: 5px;
+			margin-top: 2px;
+			background-color: #424140;
+		}
+		.panel a:link {
+			color: #e8e3e0;
+		}
+		.panel a:focus,
+		.panel a:hover {
+			color: white;
+		}
+		.panel-heading {
+			text-align: center;
+		}
+		.project-button {
+			margin-top: 1px;
+			margin-bottom: 1px;
+			border-color: black;
+		}
+		.list-group {
+			background-color: white;
+		}
+		.code-link {
+			font-size: 2em;
+			line-height: 50px;
+			color: blue;
+			transition: font-size .2s ease-in-out;
+		}
+		.code-link:hover {
+			color: #424140;
+			font-size: 2.4em;
+			
+		}
+		.iframe-container {
+			position: relative;
+			margin: 5px;
+			padding: 0;
+			height: 300px;
+			overflow: hidden;
+		}
+		.iframe-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			border: 1px inset #7a8b8b;
+		}
+		.website-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 0;
+			height: 0;
+			overflow: hidden;
+		}
+		.website-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<!--navbar-->
+	<nav class="navbar dark-color fixed-top navbar-toggleable-sm navbar-light bg-faded" style="height:55px;">
+		<button class="navbar-toggler navbar-toggler-right" type="button" style="background-color:#383738;" data-toggle="collapse"
+		 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" style="background-color:#424140; padding-left:20px" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item list-item nav-link active" href="#home-section" style="color:white">Home</a>
+				<a class="nav-item nav-link list-item" href="#education-section" style="color:white">Education</a>
+				<a class="nav-item nav-link list-item" href="#about-me-section" style="color:white">About Me</a>
+				<a class="nav-item nav-link list-item" href="#projects-section" style="color:white">Projects</a>
+				<a class="nav-item nav-link list-item" href="#skills-section" style="color:white">Skills</a>
+				<a class="nav-item nav-link list-item" href="#work-history-section" style="color:white">Work History</a>
+				<a class="nav-item nav-link list-item" href="#contact-section" style="color:white">Contact</a>
+
+			</div>
+		</div>
+	</nav>
+
+	<!--main entry screen-->
+	<div id="home-section" class="jumbotron-fluid jumbo">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-9">
+					<p id="dev-name">Michael Jones</p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-8">
+					<hr id="jumbo-bar">
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-9">
+					<h3 class="text-right" id="job-title">Software Developer</h3>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--about me-->
+	<div class="container-fluid light-color" id="about-me-section">
+		<h3 class="text-center header-top-margin">About Me</h3>
+		<div class="row">
+			<div class="col-lg-6">
+				<p id="intro">
+					Hi, I'm Mike. Four years ago, I decided to try my hand at software development. Little did I know that I was about to discover
+					a new passion! I quickly realized this field offered a copious amount of challenges and opportunities. I began pursuing
+					a degree in computer science and I engage in some form of software development activity every day.
+					</b>
+					I strive for continuous self-improvement via small, incremental growth. I believe in dependability, collaboration, and positivity.
+					I also subscribe to the idea that anything can be achieved with determination and perseverance. I have a good sense
+					of humor and I am committed to providing the highest quality product. Because these characteristics are so influential,
+					I am immediately able to make a meaningful impact.
+				</p>
+
+			</div>
+			<div class="col-lg-6">
+				<div id="carouselControls" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<!-- images 650x488-->
+						<div class="carousel-item active">
+							<img class="d-block w-100 fill" src="images/me_in_paris.jpg" alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="fill d-block w-100" src="images/olly_computer.jpg" alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="fill d-block w-100" src="images/honey.jpg" alt="Third slide">
+						</div>
+						<div class="carousel-item">
+							<img class="fill d-block w-100" src="images/sd_view.jpg" alt="Fourth slide">
+						</div>
+						<div class="carousel-item">
+							<img class="fill d-block w-100" src="images/in_park.jpg" alt="Fifth slide">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="padding-left:20px;">
+			<div class="col-12 col-md-4 values-col text-center grow">
+				<h4>RELIABILITY</h4>
+				<img class="rounded" src="images/reliability_image.png">
+
+				<div>
+					I understand the importance of being reliable. Setting reasonable expectations, proper planning, and staying well organized
+					are the tools I use to ensure my work is accomplished in a dependable manner. To all that I have worked for and with,
+					this quality that has proven invaluable.
+				</div>
+
+			</div>
+			<div class="col-12 col-md-4 values-col text-center grow">
+				<h4>EFFICIENCY</h4>
+				<img class="rounded" src="images/efficient_image.png">
+				<div>
+					In a world where there is nearly an infinite number of ways to accomplish a task, it is crucial to ensure that efficiency
+					is being applied in the areas of most significance. I know how to take stock of resources and make certain to provide
+					the best quality product with the least amount of waste.
+				</div>
+			</div>
+			<div class="col-12 col-md-4 values-col text-center grow">
+				<h4>TEAMWORK</h4>
+				<img class="rounded" src="images/teamwork_image.png">
+				<div>
+					The backbone of any good venture. Great collaboration is the keystone to success and I have years of experience working in
+					teams as well as leading them to goal accomplishment. I am quite experienced at establishing and maintaining a cohesive
+					team and building camaraderie.
+				</div>
+			</div>
+		</div>
+		<hr class="section_break">
+	</div>
+
+	<!--Education-->
+	<div class="container-fluid light-color" id="education-section">
+		<h3 class="text-center header-top-margin">Education</h3>
+		<div class="row">
+			<div class="col-12 col-md-4 text-center">
+				<img class="fill" style="max-height:180px;" src="images/csusm_logo.jpeg">
+			</div>
+			<div class="col-12 col-md-8">
+				<p class="text_company">Bachelors of Science in Computer Science (in progress)</p>
+				<p class="text_title">2017 - 2019</p>
+				<ul class="text_description">
+					<li>GPA - 3.8</li>
+					<li>Computer Science Scholarship Program Mentor</li>
+					<li>Association for Computing Machinery</li>
+					<li>Student Veterans Organization</li>
+				</ul>
+			</div>
+		</div>
+		<hr style="margin-left:100px; margin-right:100px;">
+
+		<div class="row">
+			<div class="col-12 col-md-4 text-center">
+				<img class="fill" style="max-height:180px;" src="images/miracosta_logo.jpeg">
+			</div>
+			<div class="col-12 col-md-8">
+				<p class="text_company">Associate of Arts in Social and Behavioral Science</p>
+				<p class="text_title">2013 - 2017</p>
+				<ul class="text_description">
+					<li>GPA - 3.6</li>
+					<li>Competed in regional ACM competition 2016</li>
+					<li>Volunteer for the 2017 STREAM festival, teaching children computer science fundamentals</li>
+				</ul>
+
+
+			</div>
+		</div>
+
+		<hr class="section_break">
+	</div>
+
+	<!--Projects-->
+	<div class="container-fluid light-color" id="projects-section">
+		<h3 class="text-center header-top-margin">Projects</h3>
+		<div class="row" style="padding-left:20px;">
+			<!--projects tab section-->
+			<div class="col-12 col-md-3" id="projects-panel">
+				<div class="panel-group" id="accordion">
+					<div class="panel">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapse-java">Java</a>
+							</h4>
+						</div>
+						<div id="collapse-java" class="panel-collapse collapse in show">
+							<div class="list-group">
+								<button type="button" class="project-button list-group-item list-group-item-action" value="merge-sort">Merge Sort</button>
+								<button type="button" class="project-button list-group-item list-group-item-action" value="radix-sort">Radix Sort</button>
+								<button type="button" class="project-button list-group-item list-group-item-action" value="avl-tree">AVL Tree</button>
+								<button type="button" class="project-button list-group-item list-group-item-action" value="virtual-machine">Virtual Machine</button>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Android</a>
+							</h4>
+						</div>
+						<div id="collapse2" class="panel-collapse collapse">
+							<div class="list-group">
+								<button type="button" class="project-button list-group-item list-group-item-action" value="karaoke-list">My Karaoke List</button>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Web</a>
+							</h4>
+						</div>
+						<div id="collapse3" class="panel-collapse collapse">
+							<div class="list-group">
+									<button type="button" class="project-button list-group-item list-group-item-action" value="portfolio-website">Portfolio Website (In Development)</button>
+								<button type="button" class="project-button list-group-item list-group-item-action" value="resume-website">Resume Website</button>
+								<button type="button" class="project-button list-group-item list-group-item-action" value="guessing-game">Guessing Game</button>
+								<button type="button" class="project-button list-group-item list-group-item-action" value="reaction-tester">Reaction Tester</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--projects window section-->
+			<div class="col-12 col-md-9" id="projects-window">
+				<!--JAVA PROJECTS-->
+				<!--Merge sort-->
+				<div id="merge-sort" class="collapse show project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/MySchoolWork/tree/master/HW10%20-%20Merge%20Sort" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>Merge Sort</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								Merge sort is a means of sorting that recursively splits the data in half until it is all a single unit. Then, as it climbs
+								back up the stack, it sorts and merges the data.
+							</div>
+
+							<div class="row" style="padding:10px;">
+								Merge sort is fairly tricky to implement but does provide a bit of an efficiency boost in its sorting time compared to easier
+								to implement sorting algorithms.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<div style="position:relative;height:0;padding-bottom:56.25%">
+								<iframe src="https://www.youtube.com/embed/4VqmGXwpLqc?ecver=2" width="640" height="360" frameborder="1" style="position:absolute;width:100%;height:100%;left:0;"
+								 allowfullscreen>
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Radix sort-->
+				<div id="radix-sort" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/MySchoolWork/tree/master/Lab%2016%20-%20Radix%20Sort" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>Radix Sort</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								Radix sort is a unique and clever way of sorting numbers. It essentially sorts the number by its place values (tens, hundreds,
+								thousands, etc.) and does it very fast for large datasets.
+							</div>
+
+							<div class="row" style="padding:10px;">
+								Creating the radix sort algorithm was an interestesting experience because of the uniqueness of the concept. I can appreciated
+								the critical thinking involved, especially with regards to conceptualization and implementation.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/nu4gDuFabIM" frameborder="0" allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+				</div>
+				<!--AVL Tree-->
+				<div id="avl-tree" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/MySchoolWork/tree/master/HW11%20-%20AVL%20Trees/src/edu/miracosta/cs113"
+							 target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>AVL Tree</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								An AVL tree is a self-balancing binary tree. This essentially means that from any given node, everything to the left is of
+								a lower value, and everthing to the right is of a greater value, and the height of the left tree and right tree will
+								differ by no more than one level.
+							</div>
+
+							<div class="row" style="padding:10px;">
+								Creating the AVL tree was a very challenging project. Keeping track of the tree height and performing proper insertion and
+								rotation were key in implementing this data structure.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<div style="position:relative;height:0;padding-bottom:75.0%">
+								<iframe src="https://www.youtube.com/embed/5C8bLQBjcDI?ecver=2" width="480" height="360" frameborder="1" style="position:absolute;width:100%;height:100%;left:0"
+								 allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Virtual Machine-->
+				<div id="virtual-machine" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/MySchoolWork/tree/master/VirtualMachine" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>Virtual Machine</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								A virtual machine is a computer that is made in software and can run applications. They are useful for ensuring a known environment
+								regardless of the machine running it
+							</div>
+
+							<div class="row" style="padding:10px;">
+								This was a very challenging project. This assignment required I build the begnings of a VM, which would read in the compiled
+								code from the compiler, interpretate it, and write it out in assembly.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<div style="position:relative;height:0;padding-bottom:75.0%">
+								<video width="480" height="360" controls style="position:absolute;width:100%;height:100%;left:0">
+									<source src="images/vm-nand2tetris.mp4" type="video/mp4">
+								</video>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--ANDROID PROJECTS-->
+				<!--karaoke list app-->
+				<div id="karaoke-list" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/MyKaraokeList" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>My Karaoke List</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								This is an app that stores and maintains your karaoke song list, searches for lyrics, and can identify a song currently playing
+								in your environment.
+							</div>
+							<div class="row" style="padding:10px;">
+								I utilized the Gracenote API for audio-fingerprinting, OAuth for user authentication, and Google Firebase for cloud-based
+								data storage. I learned how to create listeners to be called on the UI thread for asynchronous integration as well
+								as the importance of resource management and maintaining sync between cloud based data and the user device.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+
+							<div id="carousel-karaoke-controls" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner karaoke-carousel-window" style="border-radius:20px;">
+									<div class="carousel-item active" style="background-color:#424140">
+										<img class="d-block w-100 fill" style="max-height:500px;" src="images/lyrics_image.png" alt="Lyrics Screen">
+									</div>
+									<div class="carousel-item" style="background-color:#424140">
+										<img class="fill d-block w-100" style="max-height:500px;" src="images/login_screen_image.png" alt="Login Screen">
+									</div>
+									<div class="carousel-item" style="background-color:#424140">
+										<img class="fill d-block w-100" style="max-height:500px;" src="images/list_with_buttons_image.png" alt="Main Screen">
+									</div>
+									<div class="carousel-item" style="background-color:#424140">
+										<img class="fill d-block w-100" style="max-height:500px;" src="images/listening_image.png" alt="Audio Fingerprinting Screen">
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carousel-karaoke-controls" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carousel-karaoke-controls" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--WEB PROJECTS-->
+
+				<!--portfolio website-->
+				
+ 				<div id="portfolio-website" class="collapse project-content" data-parent="projects-window">
+						<div class="row">
+							<div class="col-12 col-md-4 text-center">
+								<a class="code-link" href="new_site/index.html" target="_blank">
+									View Here
+								</a>
+							</div>
+	
+							<div class="col-12 col-md-8 text-center">
+								<h4>Portfolio Website</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 col-lg-4">
+								<div class="row" style="padding:10px;">
+									A portfolio website to convey my personality and skills as a developer.
+								</div>
+	
+								<div class="row" style="padding:10px;">
+									For this site, I am putting a lot of emphasis on animations and user experience.  It is still a work in progress and will
+									eventually replace this site as my primary means of web presence.  I have really enjoyed making transitions enjoyable for the user
+									and exploring different user engagement techniques.
+								</div>
+							</div>
+							<div class="col-12 col-lg-8 text-center">
+								<div class="iframe-container iframe-container-for-wxh-500x350" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+									<iframe src="new_site/index.html">
+									</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+				<!--resume website-->
+				<div id="resume-website" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/ResumeWebsite" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>Resume Website</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								A personal website to showcase skills in HTML, CSS, Javascript, and affiliated frameworks an libraries.
+							</div>
+
+							<div class="row" style="padding:10px;">
+								Building this site was incredibly fun! I found Bootstrap to be a fantastic tool for organizing the sites layout as well as
+								implementing responsiveness for a quality user experience regardless of the size of screen/device they are using.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<div class="iframe-container iframe-container-for-wxh-500x350" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+								<iframe src="https://pointerjones.com/">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--guessing game-->
+				<div id="guessing-game" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/ResumeWebsite/blob/master/public/views/guessing_game.html" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>Guessing Game</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								A simple guessing game. The computer generates a random number between 0 and 100 and the user has to guess. They are given
+								prompts of "hot" or "cold" to indicate proximity.
+							</div>
+							<div class="row" style="padding:10px;">
+								This was a fun and simple game to build. I used JQuery and my own javascript methods concurrently to implement the functionality.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<div class="website-container">
+								<iframe src="views/guessing_game.html" frameborder="1">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--reaction tester-->
+				<div id="reaction-tester" class="collapse project-content" data-parent="projects-window">
+					<div class="row">
+						<div class="col-12 col-md-4 text-center">
+							<a class="code-link" href="https://github.com/MichaelJones53/ResumeWebsite/blob/master/public/views/reaction.html" target="_blank">
+								<\code>
+							</a>
+						</div>
+
+						<div class="col-12 col-md-8 text-center">
+							<h4>Reaction Tester</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="row" style="padding:10px;">
+								Reaction tester tests the speed in which you can click on an object that appears randomly on the screen.
+							</div>
+							<div class="row" style="padding:10px;">
+								To make this game, I used a fair amount of Javascript tools as well as a manually created css grid. I used several click
+								event listeners as well as event end listeners, triggering other events only when a task has been completed.
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 text-center">
+							<div class="website-container">
+								<iframe src="views/reaction.html" frameborder="1">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="section_break">
+	</div>
+	</div>
+	<!--Skills-->
+	<div class="container-fluid light-color" id="skills-section">
+		<h3 class="text-center header-top-margin">Skills</h3>
+		<div class="row text-center">
+			<!--image 180x180-->
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.oracle.com/java/index.html" target="_blank">
+					<img class="rounded grow" src="images/java_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://developer.android.com/index.html" target="_blank">
+					<img class="rounded grow" src="images/android_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://developer.apple.com/swift/" target="_blank">
+					<img class="rounded grow" src="images/swift_icon.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://developer.apple.com/xcode" target="_blank">
+					<img class="rounded grow" src="images/xcode_icon.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.xml.com/" target="_blank">
+					<img class="rounded grow" src="images/xml_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.w3.org/html/" target="_blank">
+					<img class="rounded grow" src="images/html5_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+					<img class="rounded grow" src="images/css3_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.javascript.com/" target="_blank">
+					<img class="rounded grow" src="images/javascript_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.microsoft.com/net/core#macos" target="_blank">
+					<img class="rounded grow" src="images/csharp_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://getbootstrap.com/" target="_blank">
+					<img class="rounded grow" src="images/bootstrap_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://jquery.com/" target="_blank">
+					<img class="rounded grow" src="images/jquery_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://firebase.google.com/" target="_blank">
+					<img class="rounded grow" src="images/firebase_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.sqlite.org/" target="_blank">
+					<img class="rounded grow" src="images/sqlite_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://github.com/" target="_blank">
+					<img class="rounded grow" src="images/github_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.jetbrains.com/idea/" target="_blank">
+					<img class="rounded grow" src="images/intellij_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.visualstudio.com/" target="_blank">
+					<img class="rounded grow" src="images/visual_studio_image.png">
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 skills-div">
+				<a href="https://www.eclipse.org/downloads/eclipse-packages/" target="_blank">
+					<img class="rounded grow" src="images/eclipse_image.png">
+				</a>
+			</div>
+		</div>
+		<hr class="section_break">
+	</div>
+
+	<!--Work History-->
+	<div class="container-fluid light-color" id="work-history-section">
+		<h3 class="text-center header-top-margin">Work History</h3>
+
+
+		<div class="row">
+				<div class="col-12 col-md-4 text-center">
+					<img class="fill" style="border-radius:0px;" src="images/aig_logo.png">
+				</div>
+				<div class="col-12 col-md-8">
+					<p class="text_company">AIG Direct - San Diego, CA</p>
+					<p class="text_title">2018 .Net Web Applications Developer Intern</p>
+					<p class="text_description">Mentored, trained, and encouraged high school females to pursue their interest in a software development</p>
+					<ul class="text_description">
+						<li>Developed more than 100 unit tests for 3 different .Net Core microservices and resolved issues identified from tests, aiding in institution of TDD model in agile environment.</li>
+						<li>Utilized Postman to write more than 500 tests for 2 API endpoints, identifying discrepancies and increasing business and client confidence.
+						</li>
+						<li>Developed Amazon Alexa Skill with in house API integration, utilizing C# in a .Net Core 2.0 hosted on AWS to provide a desirable user experience.
+						</li>
+						<li>Researched and created script for integrating solution tests into build process to verify successful results and validate code coverage and business defined styling.
+							</li>
+							<li>Leveraged team development tools such as Jira and Bitbucket to practice Agile principles and develop in a collaborative, team environment.
+								</li>
+								<li>Led project to assess, test, and evaluate the practicality and efficacy of utilizing IBM’s Watson and Google’s s Machine Learning API services for call center transcriptions. 
+									</li>
+						
+					</ul>
+				</div>
+			</div>
+			<hr style="margin-left:200px; margin-right:200px;">
+		<div class="row">
+			<div class="col-12 col-md-4 text-center">
+				<img class="fill" style="border-radius:0px;" src="images/csusm_logo.jpeg">
+			</div>
+			<div class="col-12 col-md-8">
+				<p class="text_company">California State University, San Marcos - San Marcos, CA</p>
+				<p class="text_title">2018 - Present Software Development Mentor</p>
+				<p class="text_description">Mentored, trained, and encouraged high school females to pursue their interest in a software development</p>
+				<ul class="text_description">
+					<li>Educated and mentored more than 16 high school females at 2 different schools on software development, design, and implementation using Microsoft Touch Develop and Greenfoot IDE's.</li>
+					<li>Collaborated with local NPO’s to devise projects for the participants.
+					</li>
+					<li>Promoted team-building exercises, increasing cohesiveness and nurturing group-oriented development techniques.  
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<hr style="margin-left:200px; margin-right:200px;">
+
+		<div class="row">
+			<div class="col-12 col-md-4 text-center">
+				<img class="fill" style="border-radius:0px;" src="images/sound_logo.png">
+			</div>
+			<div class="col-12 col-md-8">
+				<p class="text_company">Sound Technologies - Carlsbad, CA</p>
+				<p class="text_title">2015 - 2017 Ultrasound Service Manager</p>
+				<p class="text_description">Envisioned, established, and managed the direction of the ultrasound service department, creating a profitable and successful
+					business segment, generating $1M+ with GM 81.5%</p>
+				<ul class="text_description">
+					<li>Established relationships with relevant GE parts suppliers and negotiated crucial pricing contracts, ensuring the best
+						possible transfer price on necessary parts and equipment</li>
+					<li>Developed refurbishment program, generating $250K+ with GM 45.5% annually and opening a new market segment</li>
+					<li>Developed service department for Sound customer base, significantly increasing customer satisfaction for service issues
+						and opening a new revenue stream of approx. $150K with GM 66%</li>
+					<li>Created ultrasound warranty program, including pricing structure, offerings, and technical support training, establishing
+						a $600K+ with GM 81.5% annually, and 300% year over year growth</li>
+				</ul>
+				<hr style="margin-left:200px; margin-right:200px;">
+
+				<p class="text_title">2013 - 2015 Ultrasound Service Technician</p>
+				<p class="text_description">Troubleshoot, repair, maintain, and refurbish all Sound-Eklin ultrasound and RLT (Regenerative Laser Therapy) Laser inventory</p>
+				<ul class="text_description">
+					<li>Managed, maintained, and utilized Microsoft CRM and Intuitive ERP databases for ultrasound inventory and product tracking</li>
+					<li>First ultrasound service employee, establishing new external relationships and broadening the company’s horizon</li>
+					<li>Managed and maintained the upkeep of a flowing inventory of 60+ ultrasound units of 12 different platforms, ensuring
+						functionality at all demonstrations, trade shows, and live-labs</li>
+					<li>Performed maintenance, troubleshooting, and systems repairs as well as provided consultation for customer upgrades</li>
+					<li>Managed and drove several discrepancy solution meetings between Sound Eklin and GE, resolving more than 40 discrepancies
+						that had been outstanding, some exceeding 4 years</li>
+
+				</ul>
+			</div>
+		</div>
+		<hr style="margin-left:200px; margin-right:200px;">
+
+
+
+		<div class="row">
+			<div class="col-12 col-md-4 text-center">
+				<img class="fill" src="images/navy_logo.jpeg">
+			</div>
+			<div class="col-12 col-md-8">
+				<p class="text_company">United States Navy</p>
+				<p class="text_title">2004 - 2013 Sonar Technician</p>
+				<p class="text_description">Repaired, troubleshoot, and maintained three operating sonar suites and five auxiliary systems; ensuring equipment valued
+					at 14M+ operated 99% of the time.</p>
+				<ul class="text_description">
+					<li>Maintained and managed SKED, Navy maintenance scheduling and execution program for seven systems; overseeing 1,400+
+						maintenance checks annually</li>
+					<li>Utilization of common troubleshooting equipment such as spectrum analyzers, multimeters, decade boxes, oscilloscopes,
+						and signal generators</li>
+					<li>Served as Leading Petty Officer overseeing three combat systems acoustic work centers; managing 11 personnel, administering
+						drills and conducting shipboard evolutions</li>
+					<li>6 years experience as divisional Supply Petty Officer, ordering of more than 400 parts for 9 different systems</li>
+					<li>Supervised, instructed, and evaluated the performance of four employees; while overseeing the work center for CA-01
+						and six sonar systems</li>
+					<li>Led 15+ Undersea Warfare exercises for in-house and command wide training experience</li>
+					<li>Served as Web-Enabled IUSS Logistics Database Administrator, monitoring and maintaining 30 user accounts and ensuring
+						discrepancies were diagnosed and resolved promptly</li>
+				</ul>
+
+
+			</div>
+		</div>
+
+		<hr class="section_break">
+	</div>
+
+	<!--Contact-->
+	<div class="container-fluid light-color contact-container" id="contact-section">
+		<h3 class="text-center header-top-margin">Contact</h3>
+		<div class="row justify-content-center">
+			<div class="col-4 text-center">
+				<div class="row justify-content-center">
+					<a href="https://www.linkedin.com/in/michael-adam-jones/" target="_blank">
+						<span class="fa fa-linkedin contact-icon" aria-hidden="true" style="color:#424140"></span>
+					</a>
+				</div>
+				<div class="row justify-content-center">
+					LinkedIn
+				</div>
+			</div>
+
+			<div class="col-4 text-center">
+				<div class="row justify-content-center">
+					<a href="mailto:Dev.Michael.Jones@gmail.com">
+						<span class="fa fa-envelope contact-icon" aria-hidden="true" style="color:#424140"></span>
+					</a>
+				</div>
+				<div class="row justify-content-center">
+					E-mail
+				</div>
+			</div>
+			<div class="col-4 text-center">
+				<div class="row justify-content-center">
+					<a href="https://docs.google.com/document/d/1dFCBJ-eDffJ8Dm6e45v0HUpDaWlGyQC2Wc2VIvxoEDo/edit?usp=sharing"
+					 target="_blank">
+						<span class="fa fa-file-text contact-icon" aria-hidden="true" style="color:#424140"></span>
+					</a>
+				</div>
+				<div class="row justify-content-center">
+					Resume
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Bootstrap core JavaScript
+    	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+	 crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		//preforms load document animation
+		$(window).on('load', function () {
+			$("#dev-name").slideDown("slow", function () {
+				$("#jumbo-bar").fadeIn("slow", function () {
+					$("#job-title").slideDown("slow", function () {
+						$(".dark-color").slideDown("slow", function () {
+							$(".light-color").slideDown("slow", function () {
+								$(".panel-group").slideDown("slow");
+							});
+						});
+					});
+				});
+			});
+		});
+		//collapses navbar upon selection of list item	
+		$('.navbar-nav>a').on('click', function () {
+			$('.navbar-collapse').collapse('hide');
+		});
+		//collapses currently shown project and shows selected
+		$(document).ready(function () {
+			$(".project-button").click(function () {
+				var divToShow = this.value;
+				$("#" + divToShow).slideDown().siblings(".project-content").slideUp();
+			});
+		});
+	</script>
+
+</body>
+
+</html>
